@@ -1,1 +1,40 @@
+                                  REGRAS DE NEGÓCIO 
+
+RN01 — Produtos pertencem a categorias
+Cada produto comercializado pela adega deve estar relacionado a uma categoria, como bebidas, alimentos, produtos para narguilé, cigarros e isqueiros.
+RN02 — Uma venda pode conter vários produtos
+Uma venda pode incluir um ou mais produtos diferentes, como cerveja, refrigerante e carvão para narguilé.
+RN03 — Formas de pagamento
+As vendas podem ser pagas por Pix, cartão de crédito, cartão de débito ou dinheiro.
+RN04 — Controle de pagamento
+Os pagamentos realizados por Pix e cartão são conferidos por meio dos registros da máquina de pagamento e das contas relacionadas. Pagamentos em dinheiro são conferidos no momento do recebimento, com troco quando necessário.
+RN05 — Venda gera saída de estoque
+Quando um produto é vendido, sua quantidade disponível deve ser considerada uma saída de estoque.
+RN06 — Produtos utilizados para doses geram saída de estoque
+Quando uma garrafa é aberta para preparar doses, ela deixa de poder ser vendida fechada. Portanto, essa utilização deve ser considerada uma saída ou movimentação de estoque.
+RN07 — Perdas geram saída de estoque
+Produtos quebrados, vencidos ou perdidos devem ser retirados do estoque e considerados como uma movimentação de saída.
+RN08 — Controle de fiado
+Clientes que realizam compras fiadas devem possuir um registro contendo seu nome, o valor devido e um limite de crédito definido.
+RN09 — Limite do fiado
+O valor acumulado das compras fiadas de um cliente não pode ultrapassar o limite de crédito estabelecido para ele.
+RN10 — Registro de itens do fiado
+Nas compras realizadas fiado, devem ser registrados os produtos retirados e seus respectivos valores, permitindo identificar como o valor devido foi formado.
+RN11 — Compras devem registrar produtos e quantidades
+As compras realizadas pela adega devem registrar os produtos adquiridos e suas respectivas quantidades.
+RN12 — Registro dos valores das compras
+Nas compras de mercadorias, são conhecidos os valores individuais dos produtos e o valor total da compra.
+RN13 — Conferência das mercadorias recebidas
+Quando uma mercadoria chega, os produtos e suas quantidades devem ser conferidos individualmente antes de serem armazenados.
+RN14 — Tratamento de mercadoria incorreta ou faltante
+Quando uma mercadoria chega errada ou com quantidade faltante, o fornecedor deve ser contatado para realizar a troca ou completar o pedido.
+RN15 — Necessidade de reposição
+Quando um produto está acabando ou já acabou, o funcionário identifica a necessidade e registra o que precisa ser comprado.
+RN16 — Responsabilidade pela compra
+O funcionário pode identificar e informar os produtos que precisam ser repostos, enquanto o proprietário realiza a compra ou solicita o pedido ao fornecedor.
+RN17 — Fornecedores
+A adega trabalha com diferentes fornecedores. Alguns realizam a entrega das mercadorias e outros são atendidos mediante retirada dos produtos diretamente no estabelecimento do fornecedor.
+RN18 — Organização do estoque
+Após a conferência, as mercadorias recebidas devem ser colocadas na área de estoque e organizadas conforme os produtos.
+
 
