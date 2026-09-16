@@ -1,1 +1,53 @@
+                                                 Requisitos Funcionais 
+
+RF01 — Cadastro de produtos
+O sistema deve permitir cadastrar os produtos comercializados pela adega, incluindo seu nome, categoria e preço.
+RF02 — Consulta de produtos
+O sistema deve permitir consultar os produtos cadastrados e seus respectivos preços e quantidades disponíveis.
+RF03 — Controle de estoque
+O sistema deve permitir consultar a quantidade de cada produto disponível na adega e no espaço destinado ao estoque.
+RF04 — Registro de entrada de produtos
+O sistema deve permitir registrar a entrada de produtos recebidos ou retirados de fornecedores, informando o produto e sua quantidade.
+RF05 — Registro de saída de produtos
+O sistema deve permitir registrar a saída de produtos, identificando o motivo, como venda, perda, quebra ou vencimento.
+RF06 — Registro de produtos utilizados para doses
+O sistema deve permitir registrar como saída do estoque as bebidas abertas para preparação de doses.
+RF07 — Registro de vendas
+O sistema deve permitir registrar as vendas realizadas, incluindo os produtos vendidos, suas quantidades e os valores correspondentes.
+RF08 — Registro da forma de pagamento
+O sistema deve permitir registrar a forma de pagamento utilizada em cada venda, considerando Pix, dinheiro, cartão de crédito e cartão de débito.
+RF09 — Cadastro de clientes que utilizam fiado
+O sistema deve permitir cadastrar clientes que realizam compras por meio de fiado.
+RF10 — Controle de fiado
+O sistema deve permitir registrar cada compra realizada por fiado, incluindo o produto adquirido e o valor devido.
+RF11 — Controle do limite de fiado
+O sistema deve permitir registrar e consultar o limite de fiado de cada cliente e impedir que o valor devido ultrapasse esse limite.
+RF12 — Cadastro de fornecedores
+O sistema deve permitir cadastrar os fornecedores utilizados pela adega.
+RF13 — Registro de compras
+O sistema deve permitir registrar as compras realizadas com fornecedores, incluindo os produtos, suas quantidades, preços individuais e valor total.
+RF14 — Consulta de produtos com baixa quantidade
+O sistema deve permitir identificar produtos que estejam acabando ou que necessitem de reposição.
+RF15 — Consulta de produtos com maior saída
+O sistema deve permitir consultar quais produtos possuem maior quantidade de saídas, auxiliando na decisão de reposição e compra.
+RF16 — Registro de funcionários
+O sistema deve permitir identificar os funcionários responsáveis pelas operações realizadas no sistema.
+
+
+                                     Requisitos Não Funcionais 
+RNF01 — Facilidade de uso
+O sistema deve possuir uma interface simples e intuitiva, considerando que atualmente os controles são realizados manualmente por meio de caderno e celular.
+RNF02 — Rapidez
+O sistema deve apresentar as informações de produtos e estoque de forma rápida, principalmente durante a rotina de atendimento.
+RNF03 — Integridade das informações
+O sistema deve manter as informações de produtos, vendas, compras e estoque de forma consistente, evitando registros incorretos que possam causar diferenças na quantidade disponível.
+RNF04 — Segurança
+O sistema deve proteger as informações registradas, permitindo acesso às funções de acordo com o nível de autorização definido para cada usuário.
+RNF05 — Disponibilidade
+As informações de estoque, produtos, vendas e compras devem estar disponíveis para consulta sempre que forem necessárias durante a rotina da adega.
+RNF06 — Cópia de segurança
+O sistema deve permitir a realização de cópias de segurança dos dados para reduzir o risco de perda das informações registradas.
+RNF07 — Compatibilidade
+O sistema deve poder ser utilizado em dispositivos adequados à rotina da adega, considerando que atualmente algumas informações são registradas pelo celular.
+
 
