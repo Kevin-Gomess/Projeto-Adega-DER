@@ -1,0 +1,136 @@
+A Inteligência Artificial não foi utilizada como substituta da pesquisa de campo.
+O grupo forneceu as informações reais obtidas com a organização e utilizou a IA para:
+organizar as informações;
+identificar processos;
+transformar informações em fluxos;
+estruturar requisitos;
+sugerir regras de negócio;
+levantar entidades;
+sugerir atributos;
+revisar a organização do trabalho;
+verificar se os conteúdos estavam relacionados entre si.
+As respostas da IA foram analisadas antes de serem utilizadas.
+Quando uma informação gerada não correspondia ao que havia sido informado pela organização, ela não foi tratada como fato.
+ 
+Exemplo de correção realizada durante o uso da IA 
+
+Um dos pontos considerados foi o registro das vendas.
+A IA foi orientada de que, atualmente, a adega não registra individualmente os produtos nas vendas normais. O controle atual ocorre principalmente pelo valor recebido e pelos registros relacionados ao pagamento.
+Por isso, o processo atual foi mantido dessa maneira.
+No entanto, para o sistema proposto, foi considerada a necessidade de registrar os produtos e quantidades vendidos, pois essa funcionalidade ajudaria a solucionar o problema de controle de estoque identificado na pesquisa.
+Isso demonstra que as sugestões da IA foram analisadas em relação à realidade da organização antes de serem utilizadas.
+
+Outro exemplo de validação
+Também foi analisado o funcionamento do estoque.
+A pesquisa mostrou que atualmente:
+o controle é manual;
+são utilizados caderno e celular;
+os produtos são conferidos visualmente;
+a quantidade pode ser verificada uma ou duas vezes durante a semana;
+produtos que estão acabando são anotados;
+existem diferenças entre o estoque esperado e o estoque real.
+Por isso, não foi considerado que a adega já possui um sistema automatizado de estoque.
+O sistema foi tratado como uma proposta futura para melhorar o processo atual.
+
+ Reflexão sobre o uso da Inteligência Artificial
+A utilização da IA facilitou a organização do trabalho e ajudou a transformar as informações coletadas em estruturas adequadas para a elaboração do DER.
+Entretanto, foi necessário analisar criticamente as respostas, pois a IA pode sugerir informações que não correspondem exatamente à realidade da organização.
+Por esse motivo, a pesquisa de campo foi utilizada como principal referência para as informações sobre a adega.
+A IA foi utilizada principalmente como ferramenta de apoio à organização, estruturação e revisão do conteúdo.
+
+
+Prompt utilizado :
+“Tenho uma pesquisa de campo para fazer em uma adega para um trabalho de DER. Crie perguntas que ajudem a descobrir como funcionam as vendas, estoque, compras, fornecedores, clientes, pagamentos e outros processos importantes para montar o DER. Quero perguntas naturais, como se eu estivesse conversando com o dono.”Entender o funcionamento real da organização. 
+
+O que foi feito
+A IA ajudou a elaborar perguntas para ePrompt utilizado
+Perguntas utilizadas na pesquisa
+Há quanto tempo a adega existe e como funciona no dia a dia?
+Quantas pessoas trabalham aqui e o que cada uma faz?
+Quais são os principais produtos vendidos e como vocês organizam esses produtos?
+Como acontece uma venda do começo ao fim?
+Como vocês registram as vendas atualmente?
+Quais formas de pagamento vocês aceitam e como controlam os pagamentos?
+Vocês fazem fiado ou cadastro de clientes? Como controlam isso?
+Como vocês controlam atualmente a quantidade dos produtos em estoque?
+Como vocês percebem que um produto está acabando?
+O que acontece com o estoque quando um produto é vendido, chega ou é perdido?
+Vocês fazem conferência do estoque? Como e quem faz?
+Como vocês percebem que está na hora de comprar mais produtos?
+Quem decide o que comprar e quem faz o pedido?
+Quantos fornecedores vocês utilizam e como fazem os pedidos?
+O que acontece quando uma mercadoria chega?
+O que fazem quando chega produto errado ou faltando?
+Qual é a maior dificuldade para administrar a adega atualmente?
+O que mais dá trabalho ou costuma gerar erros?
+Já aconteceu de o estoque não bater com o que vocês achavam que tinham? Como?
+Se vocês tivessem um sistema simples para ajudar na adega, o que gostariam que ele fizesse?
+Verificação
+As respostas foram obtidas diretamente com a organização. A IA não foi considerada fonte dessas informações.
+
+Prompt utilizado
+“Com base nas informações reais da pesquisa de campo da adega, organize os dados encontrados de forma que possam ser utilizados em um trabalho de DER. Separe informações sobre organização, produtos, vendas, pagamentos, clientes, fiado, estoque, compras e fornecedores. Não invente informações.”
+O que foi feito
+As respostas da pesquisa foram organizadas por assunto, facilitando a identificação dos processos e problemas da organização.
+Entre as informações identificadas estavam:
+A adega existe há aproximadamente quatro anos.
+O funcionamento ocorre aproximadamente das 13h até 23h/00h.
+Há aproximadamente 3 a 4 pessoas trabalhando em escala variável.
+Existem diversos tipos de bebidas e outros produtos.
+O estoque fica na parte de trás da adega.
+Os preços são consultados em um caderno ou em etiquetas.
+As vendas podem possuir vários produtos.
+As vendas normais não registram individualmente cada produto.
+São aceitos Pix, cartão de crédito, cartão de débito e dinheiro.
+Existem clientes que compram fiado.
+O fiado possui limite.
+No fiado são registrados os produtos retirados e seus valores.
+O controle de estoque é principalmente manual.
+O estoque é conferido normalmente uma ou duas vezes por semana, podendo ocorrer mais vezes quando necessário.
+As compras são registradas no celular com produtos e quantidades.
+A adega utiliza aproximadamente oito fornecedores.
+Alguns fornecedores fazem entregas e outros são retirados pessoalmente.
+As mercadorias recebidas são conferidas uma por uma.
+Produtos errados ou faltantes são comunicados ao fornecedor.
+A falta de um sistema para controlar entradas e saídas do estoque é uma das principais dificuldades.
+Verificação
+As informações foram comparadas com as respostas originais da pesquisa de campo
+
+ Prompt utilizado
+“Estou fazendo um trabalho de faculdade sobre DER baseado em uma pesquisa de campo realizada em uma adega. Preciso organizar as informações coletadas e saber o que deve ficar em cada parte do trabalho. Quero que o conteúdo fique natural e não pareça robótico.”
+O que foi feito
+A IA ajudou a organizar o projeto em pastas de acordo com as partes solicitadas na atividade.
+Foi sugerida a seguinte estrutura:
+Projeto DER — Adega
+│
+├── 📁 Pesquisa de Campo
+├── 📁 Evidências
+├── 📁 Fluxogramas
+├── 📁 Requisitos
+├── 📁 DER
+├── 📁 Dicionário de Dados
+├── 📁 README
+└── 📁 Uso de IA
+Resultado utilizado
+Foi definido que:
+Pesquisa de Campo: informações coletadas diretamente na organização, perguntas, respostas e observações.
+Evidências: fotos e outras comprovações da realização da pesquisa de campo.
+Fluxogramas: descrição dos processos e posteriormente os fluxogramas visuais.
+Requisitos: requisitos funcionais e não funcionais.
+DER: entidades, atributos, relacionamentos, cardinalidades e diagrama.
+Dicionário de Dados: descrição dos atributos, regras e exemplos fictícios.
+README: apresentação geral do projeto.
+Uso de IA: registro da utilização da Inteligência Artificial.
+Verificação
+A estrutura foi comparada com os itens solicitados na atividade e organizada para facilitar a localização de cada parte do projeto.
+
+O uso do ChatGPT ocorreu como apoio ao desenvolvimento do projeto, principalmente para organizar e estruturar informações obtidas pelo grupo.
+A ferramenta não substituiu a pesquisa de campo e as informações sobre a organização foram baseadas nos dados coletados diretamente com a adega.
+O grupo analisou as sugestões apresentadas pela IA e realizou ajustes quando necessário, buscando manter o projeto de acordo com a realidade observada.
+Dessa forma, a Inteligência Artificial foi utilizada de maneira complementar ao trabalho do grupo, auxiliando na organização e elaboração dos documentos sem substituir a coleta e a validação das informações.
+
+Ferramenta utilizada: ChatGPT — OpenAI
+Objetivo do uso da IA:
+A Inteligência Artificial foi utilizada como ferramenta de apoio durante a elaboração da Entrega 1 do projeto. O uso ocorreu principalmente para organizar as informações obtidas na pesquisa de campo, estruturar os documentos do projeto, identificar processos, elaborar requisitos, organizar regras de negócio e levantar possíveis entidades e atributos para o DER.
+A IA não foi utilizada para inventar informações sobre a organização. Os dados referentes à adega foram fornecidos pelo grupo com base na pesquisa de campo.
+
