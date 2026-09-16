@@ -1,1 +1,102 @@
+                                            Processo de Venda 
+
+ Fluxo da venda
+Cliente escolhe os produtos
+ ↓
+ Funcionário verifica os preços
+ ↓
+ Calcula o valor da compra
+ ↓
+ Cliente escolhe a forma de pagamento
+ ↓
+ Pagamento em Pix, cartão ou dinheiro
+ ↓
+ Funcionário confere o pagamento
+ ↓
+ Venda concluída
+
+Observação: atualmente não existe registro dos produtos vendidos no momento da venda. Isso é um dos problemas que o futuro sistema deverá solucionar.
+
+
+                                  Processo de Compra de Mercadorias 
+
+
+Fluxo da compra
+Produto está acabando ou acabou
+ ↓
+ Funcionário identifica a necessidade
+ ↓
+ Anota os produtos e quantidades
+ ↓
+ Dono realiza o pedido/compra
+ ↓
+ Fornecedor entrega ou mercadoria é retirada
+ ↓
+ Mercadoria chega à adega
+ ↓
+ Produtos são conferidos individualmente
+ ↓
+ Produtos são colocados no estoque
+ ↓
+ Produtos são organizados
+Se houver problema
+Produto errado ou faltando
+ ↓
+ Funcionário entra em contato com fornecedor
+ ↓
+ Fornecedor realiza a troca ou complementa a entrega
+
+
+
+                                  Processo de Controle de Estoque 
+
+Fluxo do estoque
+Produto entra na adega
+ ↓
+ Produto é conferido
+ ↓
+ Produto é armazenado/organizado
+ ↓
+ Produto fica disponível para venda ou utilização
+ ↓
+ Pode ocorrer uma saída
+As saídas podem ser:
+Venda de produto
+Garrafa aberta para preparação de doses
+Produto quebrado
+Produto vencido
+↓
+ Quantidade disponível é reduzida
+ ↓
+ Funcionário realiza conferência manual
+ ↓
+ Identifica produtos acabando ou faltando
+ ↓
+ Anota no caderno/celular
+ ↓
+ Necessidade de compra é identificada
+
+                            para o futuro sistema 
+
+Produto → Estoque → Movimentação de Estoque
+E a movimentação poderia registrar, por exemplo:
+Situação
+Tipo de movimentação
+Mercadoria recebida
+Entrada
+Produto vendido
+Saída
+Garrafa aberta para doses
+Saída
+Produto quebrado
+Saída
+Produto vencido
+Saída
+Ajuste após conferência
+Ajuste
+
+
+
+
+
 
