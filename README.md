@@ -241,14 +241,6 @@ Compra
 - data_compra
 - valor_total
 
-12.
-Item_Compra
-- id_item_compra
-- id_compra
-- id_produto
-- quantidade
-- preco_unitario
-- subtotal
 
 É uma das entidades mais i
 
