@@ -8,7 +8,7 @@
 
 A organização escolhida para o desenvolvimento do trabalho é uma adega de pequeno porte, que atua no comércio de bebidas, alimentos, produtos para narguilé, cigarros e outros itens.
 
-O estabelecimento existe há aproximadamente 4 anos e possui cerca de 3 a 4 pessoas envolvidas nas atividades, de acordo com os dias de funcionamento. O horário de funcionamento ocorre aproximadamente das 13h até 23h ou 00h.
+O estabelecimento existe há aproximadamente 4 anos e possui cerca de 3 a 4 pessoas envolvidas nas atividades, de acordo com os dias de funcionamento. O horário de funcionamento ocorre aproximadamente das 13h até 23h de segunda a quinta, de sexta a domingo das 13h ate 00h00. 
 
 Entre os principais produtos comercializados estão refrigerantes, cervejas, bebidas alcoólicas, doces, salgadinhos, sucos, miojo, sal, açúcar, leite, produtos para narguilé, cigarros e isqueiros.
 
