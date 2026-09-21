@@ -139,27 +139,118 @@ O arquivo será disponibilizado separadamente neste projeto como **dicionario-da
 
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 
-A modelagem conceitual será construída a partir das informações levantadas durante a pesquisa de campo e dos processos identificados na organização.
+Produto
+Categoria
+Estoque
+Movimentação de Estoque
+Venda
+Item da Venda
+Pagamento
+Cliente
+Fiado
+Fornecedor
+Compra
+Item da Compra
+Funcionário
 
-As principais entidades inicialmente identificadas são:
+Entidades + atributos
+1. Produto
+Produto
+- id_produto
+- nome
+- preco_venda
+- id_categoria
 
-- **Produto**
-- **Fornecedor**
-- **Compra**
-- **Venda**
-- **Movimentação de Estoque**
+-2. 
+Categoria
+Categoria
+- id_categoria
+- nome
 
-A entidade **Produto** representa os itens comercializados pela organização e suas informações básicas.
+-
+3. 
+Estoque
+- id_estoque
+- id_produto
+- quantidade
+- localizacao
 
-A entidade **Fornecedor** representa os fornecedores responsáveis pelo fornecimento das mercadorias.
+4.
+- Movimentacao_Estoque
+- id_movimentacao
+- id_produto
+- tipo_movimentacao
+- quantidade
+- motivo
+- data_movimentacao
 
-A entidade **Compra** representa as aquisições realizadas pela organização.
+5.
+Venda
+- id_venda
+- data_venda
+- valor_total
+- id_funcionario
 
-A entidade **Venda** representa as operações de venda realizadas no estabelecimento.
+6.
+   Item_Venda
+- id_item_venda
+- id_venda
+- id_produto
+- quantidade
+- preco_unitario
+- subtotal
 
-A entidade **Movimentação de Estoque** representa as entradas e saídas de produtos, permitindo relacionar situações como recebimento de mercadorias, venda de produtos e abertura de garrafas para utilização em doses.
+7.
+Pagamento
+- id_pagamento
+- id_venda
+- forma_pagamento
+- valor_pago
+- data_pagamento
+- (Formas levantadas na pesquisa:
 
-Os atributos, relacionamentos e cardinalidades serão detalhados na modelagem conceitual e no DER.
+Pix
+Dinheiro
+Crédito
+Débito)
+
+8.
+Cliente
+- id_cliente
+- nome
+- limite_fiado
+
+9.
+Fiado
+- id_fiado
+- id_cliente
+- data_fiado
+- valor_total
+- status
+
+10.
+- Fornecedor
+- id_fornecedor
+- nome
+- contato
+
+11.
+Compra
+- id_compra
+- id_fornecedor
+- data_compra
+- valor_total
+
+12.
+Item_Compra
+- id_item_compra
+- id_compra
+- id_produto
+- quantidade
+- preco_unitario
+- subtotal
+
+É uma das entidades mais i
 
 ## 7. Diagrama Entidade-Relacionamento (DER)
 
