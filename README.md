@@ -3,10 +3,7 @@
 
 ## Metadados
 - **Nomes dos alunos e RGM**
-  - [Nome do aluno] — [RGM]
-  - [Nome do aluno] — [RGM]
-  - [Nome do aluno] — [RGM]
-
+  -
 ## 1. Caracterização da Organização
 
 A organização escolhida para o desenvolvimento do trabalho é uma adega de pequeno porte, que atua no comércio de bebidas, alimentos, produtos para narguilé, cigarros e outros itens.
