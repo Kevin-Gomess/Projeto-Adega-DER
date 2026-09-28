@@ -175,7 +175,7 @@ Entidades + atributos
 ## 3. Estoque
 
 - id_estoque (PK)
-- id_produto (FK)
+- id_produto (PK)
 - quantidade
 - localizacao
 
