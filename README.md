@@ -6,19 +6,23 @@
   -
 ## 1. Caracterização da Organização
 
-A organização escolhida para o desenvolvimento do trabalho é uma adega de pequeno porte, que atua no comércio de bebidas, alimentos, produtos para narguilé, cigarros e outros itens.
+A organização escolhida para o desenvolvimento deste trabalho é a Adega do Tonho, uma adega de bairro de pequeno porte que atua no comércio de bebidas, alimentos, produtos para narguilé, cigarros e outros itens.
 
-O estabelecimento existe há aproximadamente 4 anos e possui cerca de 3 a 4 pessoas envolvidas nas atividades, de acordo com os dias de funcionamento. O horário de funcionamento ocorre aproximadamente das 13h até 23h de segunda a quinta, de sexta a domingo das 13h ate 00h00. 
+O estabelecimento existe há aproximadamente 4 anos e conta com cerca de 3 a 4 pessoas envolvidas nas atividades, de acordo com os dias de funcionamento. O horário de atendimento é das 13h às 23h, de segunda a quinta-feira, e das 13h à meia-noite, de sexta-feira a domingo.
 
-Entre os principais produtos comercializados estão refrigerantes, cervejas, bebidas alcoólicas, doces, salgadinhos, sucos, miojo, sal, açúcar, leite, produtos para narguilé, cigarros e isqueiros.
+Entre os principais produtos comercializados estão refrigerantes, cervejas, bebidas alcoólicas, doces, salgadinhos, sucos, macarrão instantâneo, produtos básicos de mercearia, itens para narguilé, cigarros e isqueiros.
 
-O estabelecimento possui uma área de atendimento e exposição dos produtos na parte da frente e uma área destinada ao estoque na parte dos fundos. Também existem bebidas separadas para utilização na preparação de doses.
+A adega possui uma área na parte da frente destinada ao atendimento e à exposição dos produtos, enquanto a parte dos fundos é utilizada para o armazenamento do estoque. Também existem bebidas separadas para a preparação de doses.
 
-Atualmente, parte do controle das informações é realizada de forma manual. Os preços dos produtos são consultados em um caderno e, em alguns casos, por etiquetas. As vendas comuns não são registradas individualmente por produto, sendo realizado principalmente o recebimento do pagamento. Já as vendas fiadas possuem um controle dos produtos retirados e do valor que ficou pendente.
+Atualmente, parte do controle das informações é realizada manualmente. Os preços dos produtos são consultados em um caderno ou por meio de etiquetas. Nas vendas comuns, não é realizado um registro individual de cada produto comercializado, sendo registrado principalmente o recebimento do pagamento. Já nas vendas fiadas, existe um controle dos produtos retirados e dos respectivos valores pendentes.
 
-As compras realizadas com fornecedores são registradas pelo celular, contendo os produtos e suas respectivas quantidades. Quando ocorre uma entrega, os produtos são conferidos individualmente antes de serem armazenados.
+As compras realizadas com fornecedores são registradas pelo celular, contendo os produtos e suas respectivas quantidades. Quando ocorre uma entrega, os itens são conferidos individualmente antes de serem armazenados. A identificação de produtos que estão acabando é feita principalmente pela observação das prateleiras e do estoque disponível.
 
-A pesquisa foi realizada com base na observação e levantamento de informações da rotina real do estabelecimento, buscando identificar os processos e as necessidades que poderiam ser atendidas por um sistema de gestão.
+Durante a rotina do estabelecimento, ocorrem diferenças entre as quantidades anotadas e o estoque real, o que dificulta o acompanhamento preciso dos produtos disponíveis. Além disso, existe certa dificuldade para identificar quais produtos possuem maior volume de vendas, já que as vendas comuns não são registradas individualmente por item.
+
+A pesquisa foi realizada por mim, com base na minha experiência e participação direta na rotina da Adega do Tonho. Atuo como funcionário e gerente, tendo uma participação próxima à administração do estabelecimento, sendo praticamente o terceiro responsável pela adega. Acompanho atividades como atendimento, vendas, organização e conferência do estoque, compras, contato com fornecedores e controle de fiado.
+
+As informações apresentadas foram levantadas a partir da observação das atividades diárias e do conhecimento dos processos internos, buscando identificar as necessidades reais do negócio e compreender como um sistema de gestão poderia auxiliar na organização das informações, no controle do estoque e no acompanhamento das operações.
 
 ## 2. Processos de Negócio
 
@@ -115,7 +119,7 @@ A realização de uma venda deve representar uma movimentação de saída dos pr
 Uma venda poderá conter mais de um produto.
 
 **RN05 — Venda fiada:**  
-Quando uma venda for realizada de forma fiada, devem ser registrados os produtos retirados e o valor que permanece pendente.
+Quando uma venda for realizada de forma fiada, devem ser registrados os produtos retirados ,valor que permanece pendente o nome da pessoa e a data da venda realizada de forma de fiado.
 
 **RN06 — Abertura de garrafa:**  
 Uma garrafa aberta para preparação de doses não poderá posteriormente ser considerada uma garrafa fechada disponível para venda.
@@ -144,7 +148,6 @@ Categoria
 Estoque
 Movimentação de Estoque
 Venda
-Item da Venda
 Pagamento
 Cliente
 Fiado
@@ -154,95 +157,112 @@ Item da Compra
 Funcionário
 
 Entidades + atributos
-1. Produto
-Produto
-- id_produto
+
+
+
+## 1. Produto
+
+- id_produto (PK)
 - nome
 - preco_venda
-- id_categoria
+- id_categoria (FK)
 
--2. 
-Categoria
-Categoria
-- id_categoria
+## 2. Categoria
+
+- id_categoria (PK)
 - nome
 
--
-3. 
-Estoque
-- id_estoque
-- id_produto
+## 3. Estoque
+
+- id_estoque (PK)
+- id_produto (FK)
 - quantidade
 - localizacao
 
-4.
-- Movimentacao_Estoque
-- id_movimentacao
-- id_produto
+## 4. Movimentação de Estoque
+
+- id_movimentacao (PK)
+- id_produto (FK)
 - tipo_movimentacao
 - quantidade
 - motivo
 - data_movimentacao
 
-5.
-Venda
-- id_venda
+## 5. Venda
+
+- id_venda (PK)
 - data_venda
 - valor_total
-- id_funcionario
+- id_funcionario (FK)
 
-6.
-   Item_Venda
-- id_item_venda
-- id_venda
-- id_produto
+## 6. Item da Venda
+
+- id_item_venda (PK)
+- id_venda (FK)
+- id_produto (FK)
 - quantidade
 - preco_unitario
 - subtotal
 
-7.
-Pagamento
-- id_pagamento
-- id_venda
+## 7. Pagamento
+
+- id_pagamento (PK)
+- id_venda (FK)
 - forma_pagamento
 - valor_pago
 - data_pagamento
-- (Formas levantadas na pesquisa:
 
-Pix
-Dinheiro
-Crédito
-Débito)
+As formas de pagamento consideradas são Pix, dinheiro, crédito e débito.
 
-8.
-Cliente
-- id_cliente
+## 8. Cliente
+
+- id_cliente (PK)
 - nome
 - limite_fiado
 
-9.
-Fiado
-- id_fiado
-- id_cliente
+## 9. Fiado
+
+- id_fiado (PK)
+- id_cliente (FK)
 - data_fiado
 - valor_total
 - status
 
-10.
-- Fornecedor
-- id_fornecedor
-- nome
-- contato
+## 10. Item do Fiado
 
-11.
-Compra
-- id_compra
-- id_fornecedor
+- id_item_fiado (PK)
+- id_fiado (FK)
+- id_produto (FK)
+- quantidade
+- preco_unitario
+- subtotal
+
+## 11. Compra
+
+- id_compra (PK)
+- id_fornecedor (FK)
 - data_compra
 - valor_total
 
+## 12. Item da Compra
 
-É uma das entidades mais i
+- id_item_compra (PK)
+- id_compra (FK)
+- id_produto (FK)
+- quantidade
+- preco_unitario
+- subtotal
+
+## 13. Funcionário
+
+- id_funcionario (PK)
+- nome
+
+## 14. Fornecedor
+
+- id_fornecedor (PK)
+- nome
+- contato
 
 ## 7. Diagrama Entidade-Relacionamento (DER)
 
