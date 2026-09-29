@@ -1,4 +1,5 @@
-[Page 1 Processos de Venda, Compra e Estoque.pdf](https://github.com/user-attachments/files/32781855/Page.1.Processos.de.Venda.Compra.e.Estoque.pdf)
+<img width="1264" height="844" alt="futuro jpg" src="https://github.com/user-attachments/assets/3452f35f-7227-49ee-b9cc-a1633e3cd539" />
+
 
 
 
