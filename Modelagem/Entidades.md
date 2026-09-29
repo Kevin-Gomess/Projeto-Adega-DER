@@ -1,5 +1,4 @@
 1. Produto
-
 Representa os produtos comercializados pela adega.
 
 id_produto (PK)
