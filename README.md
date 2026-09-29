@@ -49,89 +49,79 @@ Os fluxos dos principais processos serão apresentados nos fluxogramas disponibi
 
 ## 3. Requisitos do Sistema
 
-### 3.1 Requisitos Funcionais
+                                                 Requisitos Funcionais 
 
-**RF01 — Cadastro de produtos:**  
-O sistema deverá permitir cadastrar produtos comercializados pela organização.
 
-**RF02 — Consulta de produtos:**  
-O sistema deverá permitir consultar os produtos cadastrados e suas informações.
+-RF01 — Cadastro de produtos
+O sistema deve permitir cadastrar os produtos comercializados pela adega, incluindo nome, categoria e preço.
 
-**RF03 — Registro de compras:**  
-O sistema deverá permitir registrar as compras realizadas com fornecedores.
+-RF02 — Consulta de produtos
+O sistema deve permitir consultar os produtos cadastrados, seus respectivos preços e as quantidades disponíveis.
 
-**RF04 — Registro de entrada de estoque:**  
-O sistema deverá registrar a entrada dos produtos recebidos nas compras.
+-RF03 — Controle de estoque
+O sistema deve permitir consultar a quantidade de cada produto disponível na área de venda e no espaço destinado ao estoque dos fundos da adega.
 
-**RF05 — Registro de saída de estoque:**  
-O sistema deverá registrar as saídas de produtos decorrentes das vendas.
+-RF04 — Registro de entrada de produtos
+O sistema deve permitir registrar a entrada de produtos recebidos de fornecedores, informando o produto, a quantidade recebida e a data da movimentação.
 
-**RF06 — Registro de movimentação de estoque:**  
-O sistema deverá permitir controlar as movimentações de entrada e saída dos produtos.
+-RF05 — Registro de saída de produtos
+O sistema deve permitir registrar a saída de produtos do estoque, identificando o motivo, como venda, perda, quebra ou vencimento.
 
-**RF07 — Registro de vendas:**  
-O sistema deverá permitir registrar as vendas realizadas.
+-RF06 — Registro de produtos utilizados para doses
+O sistema deve permitir registrar como saída do estoque as bebidas abertas para preparação de doses, atualizando a quantidade disponível.
 
-**RF08 — Registro de vendas fiadas:**  
-O sistema deverá permitir registrar os produtos retirados em vendas fiadas e os respectivos valores pendentes.
+-RF07 — Registro de vendas
+O sistema deve permitir registrar as vendas realizadas, incluindo os produtos vendidos, suas respectivas quantidades, os preços unitários e o valor total da venda.
 
-**RF09 — Registro de abertura de garrafas para doses:**  
-O sistema deverá registrar a abertura de garrafas destinadas à venda de doses como uma movimentação de saída de estoque.
+-RF08 — Registro da forma de pagamento
+O sistema deve permitir registrar uma ou mais formas de pagamento utilizadas em cada venda, considerando Pix, dinheiro, cartão de crédito e cartão de débito.
 
-**RF10 — Consulta de estoque:**  
-O sistema deverá permitir consultar a quantidade disponível dos produtos.
+-RF09 — Cadastro de clientes que utilizam fiado
+O sistema deve permitir cadastrar clientes que realizam compras por meio de fiado, armazenando seus dados de identificação.
 
-**RF11 — Consulta de preços:**  
-O sistema deverá permitir consultar os preços dos produtos cadastrados.
+-RF10 — Controle de fiado
+O sistema deve permitir registrar cada compra realizada por fiado, vinculando o cliente, os produtos adquiridos, as quantidades e o valor total devido.
 
-**RF12 — Cadastro e consulta de fornecedores:**  
-O sistema deverá permitir registrar e consultar os fornecedores relacionados às compras.
+-RF11 — Controle do limite de fiado
+O sistema deve permitir cadastrar e consultar o limite de fiado de cada cliente e impedir a realização de novas compras que ultrapassem o limite disponível.
 
-### 3.2 Requisitos Não Funcionais
+-RF12 — Cadastro de fornecedores
+O sistema deve permitir cadastrar os fornecedores utilizados pela adega, armazenando seus dados de identificação e contato.
 
-**RNF01 — Usabilidade:**  
-O sistema deverá possuir uma interface simples e de fácil utilização, considerando a rotina de um estabelecimento de pequeno porte.
+-RF13 — Registro de compras
+O sistema deve permitir registrar as compras realizadas com fornecedores, incluindo os produtos, suas quantidades, os preços unitários e o valor total da compra.
 
-**RNF02 — Desempenho:**  
-As consultas e registros realizados no sistema deverão apresentar resposta adequada para utilização durante o atendimento.
+-RF14 — Consulta de produtos com baixa quantidade
+O sistema deve permitir identificar os produtos que estejam com quantidade baixa em estoque ou que necessitem de reposição.
 
-**RNF03 — Segurança:**  
-As informações registradas no sistema deverão possuir controle de acesso adequado para evitar alterações indevidas.
+-RF15 — Consulta de produtos com maior saída
+O sistema deve permitir consultar os produtos com maior quantidade vendida em determinado período, auxiliando no planejamento de reposição e compras.
 
-**RNF04 — Integridade dos dados:**  
-O sistema deverá manter a consistência das informações registradas, principalmente nos dados relacionados a produtos, vendas, compras e estoque.
+-RF16 — Identificação dos funcionários
+O sistema deve permitir cadastrar e identificar os funcionários responsáveis pelas operações realizadas, vinculando-os aos registros de vendas, movimentações de estoque e compras.
 
-**RNF05 — Disponibilidade:**  
-O sistema deverá estar disponível para utilização durante o período de funcionamento do estabelecimento.
+                                     ## Requisitos Não Funcionais
 
-## 4. Regras de Negócio
+-RNF01 — Facilidade de uso
+O sistema deve possuir uma interface simples e intuitiva, considerando que atualmente os controles são realizados manualmente por meio de caderno e celular.
 
-**RN01 — Conferência de mercadorias:**  
-Os produtos recebidos dos fornecedores devem ser conferidos antes de serem armazenados.
+-RNF02 — Rapidez
+O sistema deve apresentar as informações de produtos e estoque de forma rápida, principalmente durante a rotina de atendimento.
 
-**RN02 — Entrada de estoque:**  
-A entrada de mercadorias recebidas em uma compra deve gerar uma movimentação de entrada no estoque.
+-RNF03 — Integridade das informações
+O sistema deve manter as informações de produtos, vendas, compras e estoque de forma consistente, evitando registros incorretos que possam causar diferenças na quantidade disponível.
 
-**RN03 — Saída por venda:**  
-A realização de uma venda deve representar uma movimentação de saída dos produtos correspondentes.
+-RNF04 — Segurança
+O sistema deve proteger as informações registradas, permitindo acesso às funções de acordo com o nível de autorização definido para cada usuário.
 
-**RN04 — Venda com múltiplos produtos:**  
-Uma venda poderá conter mais de um produto.
+-RNF05 — Disponibilidade
+As informações de estoque, produtos, vendas e compras devem estar disponíveis para consulta durante o horário de funcionamento da adega, sempre que forem necessárias.
 
-**RN05 — Venda fiada:**  
-Quando uma venda for realizada de forma fiada, devem ser registrados os produtos retirados ,valor que permanece pendente o nome da pessoa e a data da venda realizada de forma de fiado.
+-RNF06 — Cópia de segurança
+O sistema deve permitir a realização de cópias de segurança dos dados para reduzir o risco de perda das informações registradas.
 
-**RN06 — Abertura de garrafa:**  
-Uma garrafa aberta para preparação de doses não poderá posteriormente ser considerada uma garrafa fechada disponível para venda.
-
-**RN07 — Saída para doses:**  
-A abertura de uma garrafa destinada à venda de doses deve ser registrada como uma saída de estoque.
-
-**RN08 — Controle de preços:**  
-Os produtos devem possuir informações de preço para consulta no momento da venda.
-
-**RN09 — Controle de quantidades:**  
-As quantidades recebidas dos fornecedores devem ser conferidas antes do armazenamento.
+-RNF07 — Compatibilidade
+O sistema deve poder ser utilizado em computadores e dispositivos móveis, como celulares, considerando as necessidades da rotina de atendimento da adega.
 
 ## 5. Dicionário de Dados Conceitual (Preliminar)
 
