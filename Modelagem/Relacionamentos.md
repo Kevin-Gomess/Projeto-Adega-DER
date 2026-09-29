@@ -13,3 +13,7 @@ Produto e Item do Fiado: identifica os produtos presentes nos registros de fiado
 Fornecedor e Compra: identifica o fornecedor relacionado a cada compra.
 Compra e Item da Compra: identifica os produtos e as quantidades adquiridas em cada compra.
 Produto e Item da Compra: permite identificar os produtos presentes nas compras realizadas.
+
+
+
+ <img width="3448" height="1848" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/f3e0b550-36cc-4a77-a34a-d92d6ebe6e4e" />
