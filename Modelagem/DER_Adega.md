@@ -143,11 +143,6 @@ Esta documentação utiliza os tipos de dados ideais para bancos de dados relaci
 | nome | VARCHAR(150) | NOT NULL | Razão social ou nome fantasia do fornecedor. |
 | contato | VARCHAR(100) | Opcional / Padrão | Telefone, WhatsApp ou e-mail corporativo. |
 
-------------------------------
-Com essa documentação detalhada, o seu trabalho acadêmico ou técnico já cumpre os requisitos de modelagem lógica! Se você quiser dar o último passo antes de finalizar, me diga:
-
-* Você quer o script gerador em código SQL (CREATE TABLE) pronto para rodar em qual banco? (PostgreSQL, MySQL ou outro)?
-* Deseja que eu explique como calcular a fórmula da regra RN09 (Limite dinâmico do Fiado) em cima dessas tabelas?
 
 
 
