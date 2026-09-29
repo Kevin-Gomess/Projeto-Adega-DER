@@ -15,3 +15,12 @@
 | Compra — Item da Compra           | 1:N           | Uma compra pode conter vários itens, e cada item pertence a uma única compra.                                                     |
 | Produto — Item da Compra          | 1:N           | Um produto pode aparecer em várias compras realizadas com fornecedores.                                                           |
 
+
+
+
+
+
+Observações sobre as cardinalidades:
+Produto e Estoque: foi adotado o relacionamento 1:1, considerando que o sistema terá apenas um registro com a quantidade total de cada produto, sem controle separado por área.
+Venda e Pagamento: foi adotado o relacionamento 1, pois uma venda pode ser paga utilizando mais de uma forma de pagamento.
+Venda, Compra e Fiado: cada operação pode conter vários itens, que são registrados nas respectivas entidades associativas.
