@@ -256,7 +256,8 @@ As formas de pagamento consideradas são Pix, dinheiro, crédito e débito.
 
 ## 7. Diagrama Entidade-Relacionamento (DER)
 
-<img width="1024" height="768" alt="final4" src="https://github.com/user-attachments/assets/ceb32bc6-1971-49c7-a34c-4b08ccd2a98a" />
+<img width="1218" height="694" alt="Captura de tela 2026-10-01 000859" src="https://github.com/user-attachments/assets/395a4654-bb2b-4840-a2f0-2ff13e7482f1" />
+
 
 
 O arquivo do DER será disponibilizado na pasta **Modelagem** deste projeto.
