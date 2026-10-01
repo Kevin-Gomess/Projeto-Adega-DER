@@ -18,3 +18,26 @@
 - Funcionário (1) → Compra (N)
 - Compra (1) → Item da Compra (N)
 - Produto (1) → Item da Compra (N)
+
+
+
+
+
+| Relacionamento                            | Cardinalidade |
+| ----------------------------------------- | ------------- |
+| **Categoria → Produto**                   | **1 : N**     |
+| **Produto → Estoque**                     | **1 : 1**     |
+| **Produto → Movimentação de Estoque**     | **1 : N**     |
+| **Funcionário → Movimentação de Estoque** | **1 : N**     |
+| **Funcionário → Venda**                   | **1 : N**     |
+| **Venda → Item da Venda**                 | **1 : N**     |
+| **Produto → Item da Venda**               | **1 : N**     |
+| **Venda → Pagamento**                     | **1 : N**     |
+| **Cliente → Fiado**                       | **1 : N**     |
+| **Fiado → Item do Fiado**                 | **1 : N**     |
+| **Produto → Item do Fiado**               | **1 : N**     |
+| **Fiado → Pagamento do Fiado**            | **1 : N**     |
+| **Fornecedor → Compra**                   | **1 : N**     |
+| **Funcionário → Compra**                  | **1 : N**     |
+| **Compra → Item da Compra**               | **1 : N**     |
+| **Produto → Item da Compra**              | **1 : N**     |
