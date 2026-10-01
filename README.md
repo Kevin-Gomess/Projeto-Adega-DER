@@ -165,7 +165,7 @@ Entidades + atributos
 ## 3. Estoque
 
 - id_estoque (PK)
-- id_produto (PK)
+- id_produto (FK)
 - quantidade
 - localizacao
 
@@ -173,6 +173,7 @@ Entidades + atributos
 
 - id_movimentacao (PK)
 - id_produto (FK)
+- id_funcionario (FK)
 - tipo_movimentacao
 - quantidade
 - motivo
@@ -227,14 +228,22 @@ As formas de pagamento consideradas são Pix, dinheiro, crédito e débito.
 - preco_unitario
 - subtotal
 
-## 11. Compra
+## 11. Pagamento do Fiado
+
+- id_pagamento_fiado (PK)
+- id_fiado (FK)
+- valor_pago
+- data_pagamento
+
+## 12. Compra
 
 - id_compra (PK)
 - id_fornecedor (FK)
+- id_funcionario (FK)
 - data_compra
 - valor_total
 
-## 12. Item da Compra
+## 13. Item da Compra
 
 - id_item_compra (PK)
 - id_compra (FK)
@@ -243,17 +252,16 @@ As formas de pagamento consideradas são Pix, dinheiro, crédito e débito.
 - preco_unitario
 - subtotal
 
-## 13. Funcionário
+## 14. Funcionário
 
 - id_funcionario (PK)
 - nome
 
-## 14. Fornecedor
+## 15. Fornecedor
 
 - id_fornecedor (PK)
 - nome
 - contato
-
 ## 7. Diagrama Entidade-Relacionamento (DER)
 
 <img width="1218" height="694" alt="Captura de tela 2026-10-01 000859" src="https://github.com/user-attachments/assets/395a4654-bb2b-4840-a2f0-2ff13e7482f1" />
