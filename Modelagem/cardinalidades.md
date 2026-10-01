@@ -1,26 +1,20 @@
+# Cardinalidades 
 
-| Relacionamento                    | Cardinalidade | Descrição                                                                                                                         |
-| --------------------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Categoria — Produto               | 1:N           | Uma categoria pode possuir vários produtos, enquanto cada produto pertence a uma categoria.                                       |
-| Produto — Estoque                 | 1:1           | Cada produto possui um único registro de estoque, que representa sua quantidade total disponível e uma localização de referência. |
-| Produto — Movimentação de Estoque | 1:N           | Um produto pode possuir várias movimentações de entrada, saída ou ajuste ao longo do tempo.                                       |
-| Venda — Item da Venda             | 1:N           | Uma venda pode conter vários itens, e cada item está vinculado a uma única venda.                                                 |
-| Produto — Item da Venda           | 1:N           | Um produto pode aparecer em vários itens de venda.                                                                                |
-| Funcionário — Venda               | 1:N           | Um funcionário pode registrar várias vendas, enquanto cada venda é associada a um funcionário.                                    |
-| Venda — Pagamento                 | 1:N           | Uma venda pode possuir um ou mais pagamentos, permitindo a utilização de diferentes formas de pagamento na mesma venda.           |
-| Cliente — Fiado                   | 1:N           | Um cliente pode possuir vários registros de fiado, enquanto cada registro está associado a um único cliente.                      |
-| Fiado — Item do Fiado             | 1:N           | Um registro de fiado pode conter vários produtos, sendo cada item vinculado a um único fiado.                                     |
-| Produto — Item do Fiado           | 1:N           | Um produto pode aparecer em vários registros de fiado.                                                                            |
-| Fornecedor — Compra               | 1:N           | Um fornecedor pode estar relacionado a várias compras realizadas pelo estabelecimento.                                            |
-| Compra — Item da Compra           | 1:N           | Uma compra pode conter vários itens, e cada item pertence a uma única compra.                                                     |
-| Produto — Item da Compra          | 1:N           | Um produto pode aparecer em várias compras realizadas com fornecedores.                                                           |
+## Relacionamentos
 
-
-
-
-
-
-Observações sobre as cardinalidades:
-Produto e Estoque: foi adotado o relacionamento 1:1, considerando que o sistema terá apenas um registro com a quantidade total de cada produto, sem controle separado por área.
-Venda e Pagamento: foi adotado o relacionamento 1, pois uma venda pode ser paga utilizando mais de uma forma de pagamento.
-Venda, Compra e Fiado: cada operação pode conter vários itens, que são registrados nas respectivas entidades associativas.
+- Categoria (1) → Produto (N)
+- Produto (1) → Estoque (1)
+- Produto (1) → Movimentação de Estoque (N)
+- Funcionário (1) → Movimentação de Estoque (N)
+- Funcionário (1) → Venda (N)
+- Venda (1) → Item da Venda (N)
+- Produto (1) → Item da Venda (N)
+- Venda (1) → Pagamento (N)
+- Cliente (1) → Fiado (N)
+- Fiado (1) → Item do Fiado (N)
+- Produto (1) → Item do Fiado (N)
+- Fiado (1) → Pagamento do Fiado (N)
+- Fornecedor (1) → Compra (N)
+- Funcionário (1) → Compra (N)
+- Compra (1) → Item da Compra (N)
+- Produto (1) → Item da Compra (N)
