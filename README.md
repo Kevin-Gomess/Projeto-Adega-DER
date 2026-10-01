@@ -256,7 +256,8 @@ As formas de pagamento consideradas são Pix, dinheiro, crédito e débito.
 
 ## 7. Diagrama Entidade-Relacionamento (DER)
 
-O Diagrama Entidade-Relacionamento será apresentado na forma visual, representando as entidades, seus atributos, relacionamentos e respectivas cardinalidades.
+<img width="1024" height="768" alt="final4" src="https://github.com/user-attachments/assets/ceb32bc6-1971-49c7-a34c-4b08ccd2a98a" />
+
 
 O arquivo do DER será disponibilizado na pasta **Modelagem** deste projeto.
 
