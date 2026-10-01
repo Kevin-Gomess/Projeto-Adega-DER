@@ -1,6 +1,6 @@
  Processos e Fluxogramas
 
-### 1. Processo de Venda (AS-IS)
+### 1. Processo de Venda 
 
 **Fluxo da venda atual:**
 
@@ -20,7 +20,7 @@ Venda concluída
 
 **Observação:** Atualmente, não existe registro dos produtos vendidos no momento da venda. No caso das compras realizadas por fiado, são registrados os produtos retirados e o valor devido pelo cliente. A falta de um registro completo das vendas é um dos problemas que o futuro sistema deverá solucionar.
 
-### 2. Processo de Compra de Mercadorias (AS-IS)
+### 2. Processo de Compra de Mercadorias 
 
 **Fluxo da compra atual:**
 
@@ -44,7 +44,7 @@ Sim → Produtos são colocados no estoque e organizados conforme o tipo.
 
 Não → Funcionário entra em contato com o fornecedor → Fornecedor realiza a troca ou complementa a entrega → Mercadorias são conferidas novamente.
 
-### 3. Processo de Controle de Estoque (AS-IS)
+### 3. Processo de Controle de Estoque
 
 **Fluxo do estoque atual:**
 
@@ -74,7 +74,7 @@ Anota as necessidades no caderno ou celular
 ↓
 Necessidade de compra ou ajuste é identificada
 
-### 4. Proposta de Controle de Estoque para o Futuro Sistema (TO-BE)
+### 4. Proposta de Controle de Estoque para o Futuro Sistema 
 
 No sistema proposto, o controle de estoque será realizado por meio do registro das movimentações dos produtos.
 
