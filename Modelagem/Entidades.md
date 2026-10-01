@@ -1,131 +1,146 @@
-1. Produto
+# Entidades do Modelo Conceitual
+
+O modelo conceitual da Adega do Tonho é composto por 15 entidades, definidas a partir das informações levantadas na pesquisa de campo.
+
+## 1. Produto
 Representa os produtos comercializados pela adega.
 
-id_produto (PK)
-nome
-preco_venda
-id_categoria (FK)
+**Atributos:**
+- id_produto (PK)
+- nome
+- preco_venda
+- id_categoria (FK)
 
+## 2. Categoria
+Representa as categorias utilizadas para organizar os produtos.
 
-2. Categoria
-Representa a classificação dos produtos comercializados.
+**Atributos:**
+- id_categoria (PK)
+- nome
 
-id_categoria (PK)
-nome
+## 3. Estoque
+Representa o estoque disponível de cada produto.
 
+**Atributos:**
+- id_estoque (PK)
+- id_produto (FK)
+- quantidade
+- localizacao
 
-3. Estoque
-Representa o controle da quantidade total disponível de cada produto e sua localização de referência.
+## 4. Movimentação de Estoque
+Registra as entradas, saídas e ajustes realizados no estoque.
 
-id_estoque (PK)
-id_produto (FK)
-quantidade
-localizacao
+**Atributos:**
+- id_movimentacao (PK)
+- id_produto (FK)
+- id_funcionario (FK)
+- tipo_movimentacao
+- quantidade
+- motivo
+- data_movimentacao
 
-Cada produto possui um único registro de estoque, sem separar as quantidades da frente e dos fundos.
+## 5. Venda
+Representa uma venda realizada na adega.
 
+**Atributos:**
+- id_venda (PK)
+- data_venda
+- valor_total
+- id_funcionario (FK)
 
-4. Movimentação de Estoque
-Registra as movimentações realizadas no estoque, como entradas, saídas e ajustes.
+## 6. Item da Venda
+Representa cada produto incluído em uma venda.
 
-id_movimentacao (PK)
-id_produto (FK)
-tipo_movimentacao
-quantidade
-motivo
-data_movimentacao
+**Atributos:**
+- id_item_venda (PK)
+- id_venda (FK)
+- id_produto (FK)
+- quantidade
+- preco_unitario
+- subtotal
 
+## 7. Pagamento
+Registra os pagamentos realizados nas vendas.
 
-5. Venda
-Representa as vendas realizadas no estabelecimento.
+**Atributos:**
+- id_pagamento (PK)
+- id_venda (FK)
+- forma_pagamento
+- valor_pago
+- data_pagamento
 
-id_venda (PK)
-data_venda
-valor_total
-id_funcionario (FK)
+**Formas de pagamento:** Pix, dinheiro, crédito e débito.
 
+## 8. Cliente
+Representa os clientes que possuem cadastro para utilização do fiado.
 
-6. Item da Venda
-Registra os produtos que fazem parte de cada venda, incluindo suas quantidades e valores.
+**Atributos:**
+- id_cliente (PK)
+- nome
+- limite_fiado
 
-id_item_venda (PK)
-id_venda (FK)
-id_produto (FK)
-quantidade
-preco_unitario
-subtotal
+## 9. Fiado
+Representa uma compra realizada pelo cliente para pagamento posterior.
 
+**Atributos:**
+- id_fiado (PK)
+- id_cliente (FK)
+- data_fiado
+- valor_total
+- status
 
-7. Pagamento
-Registra os pagamentos recebidos pelas vendas realizadas.
+## 10. Item do Fiado
+Representa cada produto incluído em uma compra realizada no fiado.
 
-id_pagamento (PK)
-id_venda (FK)
-forma_pagamento
-valor_pago
-data_pagamento
+**Atributos:**
+- id_item_fiado (PK)
+- id_fiado (FK)
+- id_produto (FK)
+- quantidade
+- preco_unitario
+- subtotal
 
-As formas de pagamento consideradas são Pix, dinheiro, crédito e débito. Uma mesma venda pode ter mais de um pagamento, permitindo a utilização de diferentes formas de pagamento na mesma operação.
+## 11. Pagamento do Fiado
+Registra os pagamentos realizados para quitar valores de compras no fiado.
 
+**Atributos:**
+- id_pagamento_fiado (PK)
+- id_fiado (FK)
+- valor_pago
+- data_pagamento
 
-8. Cliente
-Representa os clientes que possuem cadastro para controle de compras fiadas.
+## 12. Compra
+Representa uma compra de produtos realizada pela adega junto a um fornecedor.
 
-id_cliente (PK)
-nome
-limite_fiado
+**Atributos:**
+- id_compra (PK)
+- id_fornecedor (FK)
+- id_funcionario (FK)
+- data_compra
+- valor_total
 
+## 13. Item da Compra
+Representa cada produto incluído em uma compra realizada com um fornecedor.
 
-9. Fiado
-Representa os registros de compras fiadas realizadas pelos clientes.
+**Atributos:**
+- id_item_compra (PK)
+- id_compra (FK)
+- id_produto (FK)
+- quantidade
+- preco_unitario
+- subtotal
 
-id_fiado (PK)
-id_cliente (FK)
-data_fiado
-valor_total
-status
+## 14. Funcionário
+Representa os funcionários responsáveis pelas operações da adega.
 
+**Atributos:**
+- id_funcionario (PK)
+- nome
 
-10. Item do Fiado
-Registra individualmente os produtos retirados em cada compra fiada.
+## 15. Fornecedor
+Representa as empresas ou pessoas que fornecem produtos para a adega.
 
-id_item_fiado (PK)
-id_fiado (FK)
-id_produto (FK)
-quantidade
-preco_unitario
-subtotal
-
-
-11. Compra
-Representa as compras de mercadorias realizadas com os fornecedores.
-
-id_compra (PK)
-id_fornecedor (FK)
-data_compra
-valor_total
-
-
-12. Item da Compra
-Registra os produtos e suas respectivas quantidades e valores em cada compra realizada.
-
-id_item_compra (PK)
-id_compra (FK)
-id_produto (FK)
-quantidade
-preco_unitario
-subtotal
-
-
-13. Funcionário
-Representa os funcionários envolvidos nas atividades da adega.
-
-id_funcionario (PK)
-nome
-
-14. Fornecedor
-Representa os fornecedores responsáveis pelo fornecimento de mercadorias ao estabelecimento.
-
-id_fornecedor (PK)
-nome
-contato
+**Atributos:**
+- id_fornecedor (PK)
+- nome
+- contato
