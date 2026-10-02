@@ -1,5 +1,5 @@
 # Entrega 1 — Modelo Conceitual (DER)
-### Modelagem de um sistema de gestão de informações para uma organização de pequeno porte
+### Modelagem de um sistema de gestão 
 
 ## Metadados
 - **Nomes dos alunos e RGM**
