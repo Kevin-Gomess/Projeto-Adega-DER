@@ -159,4 +159,4 @@ Um produto pode aparecer em vários itens de compra.
 | Produto → Item da Compra | 1:N |
 
 
- <img width="3448" height="1848" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/f3e0b550-36cc-4a77-a34a-d92d6ebe6e4e" />
+
