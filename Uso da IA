@@ -134,3 +134,53 @@ Objetivo do uso da IA:
 A Inteligência Artificial foi utilizada como ferramenta de apoio durante a elaboração da Entrega 1 do projeto. O uso ocorreu principalmente para organizar as informações obtidas na pesquisa de campo, estruturar os documentos do projeto, identificar processos, elaborar requisitos, organizar regras de negócio e levantar possíveis entidades e atributos para o DER.
 A IA não foi utilizada para inventar informações sobre a organização. Os dados referentes à adega foram fornecidos pelo grupo com base na pesquisa de campo.
 
+Conferência das entidades e atributos
+Ferramenta e etapa:
+ChatGPT — conferência do Dicionário de Dados com o DER.
+Motivação:
+Garantir que o dicionário não apresentasse entidades ou atributos que não estavam no modelo desenvolvido.
+Prompt utilizado:
+"quero que todas as informações estejam de acordo com o DER."
+Resposta recebida:
+A IA reorganizou o dicionário considerando as entidades e atributos apresentados no DER.
+Fontes consultadas e verificadas:
+O próprio DER desenvolvido pelo grupo foi utilizado como referência principal.
+Trechos rejeitados ou corrigidos:
+Foram retiradas informações que apareciam em versões anteriores, mas que não estavam no DER final.
+Justificativa da escolha final:
+O DER foi considerado a referência principal para definir quais entidades e atributos deveriam aparecer no dicionário.
+Reflexão crítica:
+A IA não deve ser usada como única fonte para definir a estrutura do banco. A conferência com o DER foi necessária para evitar inconsistências.
+
+Inclusão dos exemplos fictícios
+Ferramenta e etapa:
+ChatGPT — revisão do Dicionário de Dados.
+Motivação:
+O enunciado informava que o documento deveria apresentar exemplos fictícios dos dados.
+Prompt utilizado:
+"o dicionario deve conter isso também: O documento apresentará as entidades e seus respectivos atributos, contendo a descrição de cada informação, regras relacionadas e exemplos fictícios para representar os dados."
+Resposta recebida
+A IA adicionou uma quarta coluna chamada Exemplo, contendo valores fictícios para cada atributo.
+Fontes consultadas e verificadas:
+Os exemplos foram conferidos pelo grupo para garantir que fossem apenas ilustrativos e não representassem dados reais.
+Trechos rejeitados ou corrigidos:
+Não foram utilizados dados reais de clientes, funcionários ou fornecedores.
+Justificativa da escolha final:
+Os exemplos foram mantidos porque fazem parte do que foi solicitado no enunciado.
+Reflexão crítica:
+Foi importante verificar os exemplos gerados pela IA para evitar o uso de informações pessoais reais. Os valores utilizados foram apenas fictícios e coerentes com o funcionamento do sistema.
+
+
+Estou desenvolvendo um trabalho de banco de dados e preciso de ajuda para montar o Dicionário de Dados ”.
+Tenho um DER pronto e quero usar ele como base para criar um documento em HTML. Preciso que o resultado tenha todas as entidades do DER e seus respectivos atributos.
+Para cada atributo, preciso colocar:
+1. Atributo
+2. Descrição
+3. Regra de negócio associada
+4. Exemplo fictício
+Quero que você me ajude passo a passo, porque ainda estou aprendendo HTML. Não faça um código muito avançado. Prefiro algo simples, direto e fácil de entender.Quero so de exemplo para eu pegar o caminho e fazer .
+O código deve ter uma tabela para cada entidade, mantendo o mesmo padrão em todas elas.
+É importante que você confira se os atributos realmente pertencem às entidades do meu DER e não crie informações que não estejam no modelo.
+Os exemplos podem ser inventados, mas devem fazer sentido para o funcionamento de uma adega.
+Depois de analisar o DER, monte o código HTML completo do Dicionário de Dados.
+
