@@ -129,7 +129,7 @@ O dicionário de dados conceitual será desenvolvido separadamente, conforme sol
 
 O documento apresentará as entidades e seus respectivos atributos, contendo a descrição de cada informação, regras relacionadas e exemplos fictícios para representar os dados.
 
-O arquivo será disponibilizado separadamente neste projeto como **dicionario-dados.html**.
+O arquivo será disponibilizado separadamente neste projeto como **dicionario_de_dado.md**.
 
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 
@@ -268,7 +268,7 @@ As formas de pagamento consideradas são Pix, dinheiro, crédito e débito.
 
 
 
-O arquivo do DER será disponibilizado na pasta **Modelagem** deste projeto.
+O arquivo do DER será disponibilizado na pasta **Modelagem** , no arquivo ** DER_Adega.md** deste projeto.
 
 ## 8. Justificativa Técnica
 
