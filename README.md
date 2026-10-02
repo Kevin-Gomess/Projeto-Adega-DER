@@ -264,7 +264,7 @@ As formas de pagamento consideradas são Pix, dinheiro, crédito e débito.
 - contato
 ## 7. Diagrama Entidade-Relacionamento (DER)
 
-<img width="1218" height="694" alt="Captura de tela 2026-10-01 000859" src="https://github.com/user-attachments/assets/395a4654-bb2b-4840-a2f0-2ff13e7482f1" />
+<img width="1448" height="1086" alt="finall5" src="https://github.com/user-attachments/assets/9fd72d8a-af0e-4d5b-ba8a-1e98f05bd6f1" />
 
 
 
