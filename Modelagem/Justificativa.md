@@ -1,21 +1,13 @@
 
 
-A modelagem conceitual foi desenvolvida a partir das informações levantadas durante a pesquisa de campo na Adega do Tonho, considerando a rotina do estabelecimento e as necessidades identificadas em relação ao controle de produtos, estoque, vendas, compras e clientes.
-
-A separação das informações em entidades permite representar os processos de forma organizada, evitando a concentração de diferentes dados em uma única estrutura.
-
-A entidade Produto foi definida para reunir as informações dos produtos comercializados, enquanto Categoria permite organizar esses produtos conforme suas classificações. A entidade Estoque foi incluída para representar a quantidade total disponível de cada produto e sua localização de referência.
-
-A entidade Movimentação de Estoque permite registrar as entradas, saídas e ajustes relacionados aos produtos, contribuindo para um acompanhamento mais organizado das alterações nas quantidades disponíveis.
-
-Para representar as vendas, foram utilizadas as entidades Venda e Item da Venda. Essa separação permite registrar os dados gerais da operação e, ao mesmo tempo, identificar os diferentes produtos, quantidades e valores que compõem cada venda.
-
-A entidade Pagamento foi incluída para registrar os valores recebidos e as respectivas formas de pagamento. Como o estabelecimento aceita pagamentos divididos, o relacionamento entre Venda e Pagamento permite associar mais de um pagamento a uma mesma venda.
-
-No controle de compras fiadas, as entidades Cliente, Fiado e Item do Fiado permitem relacionar os clientes às suas dívidas e registrar individualmente os produtos retirados, suas quantidades e valores.
-
-As entidades Compra, Item da Compra e Fornecedor foram definidas para representar as compras realizadas para reposição de mercadorias, permitindo identificar os fornecedores e os produtos adquiridos em cada operação.
-
-Por fim, a entidade Funcionário permite identificar o responsável pelo registro de cada venda.
-
-Dessa forma, o modelo conceitual busca representar os principais processos identificados na pesquisa de campo e servir como base para as próximas etapas do projeto, incluindo a elaboração do dicionário de dados e, posteriormente, a implementação do banco de dados.
+Para montar o modelo da Adega do Tonho, eu tentei separar as informações de acordo com as principais atividades que acontecem no local, como cadastro dos produtos, controle do estoque, vendas, compras, pagamentos e controle de fiado. A ideia foi deixar cada entidade com uma função específica, para não colocar várias informações diferentes dentro de uma mesma entidade.
+Escolhi a entidade Produto porque ela é uma das principais informações do sistema. É nela que ficam os dados básicos dos produtos vendidos pela adega, como nome, preço de venda e categoria. A entidade Categoria foi criada separadamente porque um produto pode pertencer a uma categoria, e uma mesma categoria pode ter vários produtos. Por isso, no DER, foi usado o relacionamento de 1 para N entre Categoria e Produto.
+Também foi criada a entidade Estoque, pois não seria interessante colocar a quantidade e a localização diretamente em Produto. O produto representa o que é vendido, enquanto o estoque representa a quantidade disponível e onde ele está guardado. A entidade Movimentação de Estoque foi criada para registrar alterações no estoque, como entradas e saídas, relacionando a movimentação com o produto e com o funcionário responsável.
+Para as vendas, foram usadas duas entidades principais: Venda e Item_Venda. Isso foi feito porque uma venda pode ter vários produtos diferentes. A entidade Venda guarda as informações gerais, como a data, o valor total e o funcionário responsável. Já Item_Venda guarda os produtos daquela venda, junto com quantidade, preço unitário e subtotal. Dessa forma, não é necessário criar vários campos de produto dentro de uma venda.
+A entidade Pagamento também foi separada de Venda porque uma venda precisa ter as informações relacionadas ao seu pagamento, como forma de pagamento, valor pago e data. No DER, Venda e Pagamento estão relacionados pelo relacionamento possui, com cardinalidade 1 para 1, conforme foi definido no modelo.
+A parte de fiado também foi separada porque representa uma situação diferente de uma venda com pagamento normal. A entidade Cliente guarda os clientes que podem utilizar o fiado, enquanto Fiado registra a compra que ficou para pagamento posterior. Um cliente pode ter mais de um fiado, por isso o relacionamento entre Cliente e Fiado foi definido como 1 para N.
+Assim como aconteceu com as vendas, foi criada a entidade Item_Fiado para representar os produtos que fazem parte de cada fiado. Isso evita colocar vários produtos diretamente dentro da entidade Fiado. Também foi criada Pagamento_Fiado, pois o cliente pode realizar pagamentos referentes ao valor que ficou pendente.
+Para as compras feitas pela adega, foram utilizadas as entidades Compra, Item_Compra e Fornecedor. A entidade Compra representa a compra de forma geral, enquanto Item_Compra mostra quais produtos foram comprados, suas quantidades, preços e subtotais. A entidade Fornecedor foi separada porque uma compra precisa estar relacionada a quem forneceu os produtos.
+A entidade Funcionário também foi criada separadamente porque o mesmo funcionário pode realizar diferentes operações dentro do sistema. No modelo, ele aparece relacionado às vendas, às movimentações de estoque e às compras.
+Em relação às cardinalidades, eu procurei representar quantas vezes uma entidade pode estar relacionada com outra. Por exemplo, uma categoria pode possuir vários produtos, então foi usado 1:N. Uma venda pode possuir vários itens de venda, também ficando 1:N. Da mesma forma, um cliente pode possuir vários registros de fiado. Nos casos em que o relacionamento representa apenas uma ocorrência para cada lado, como Venda e Pagamento no modelo apresentado, foi utilizado 1:1.
+No geral, a ideia da modelagem foi separar as informações para que cada entidade tenha uma função clara, evitando repetir dados desnecessariamente. Os relacionamentos foram usados para fazer a ligação entre essas partes. Como o trabalho ainda está na etapa conceitual, o objetivo principal foi representar de forma organizada como as informações da adega se relacionam no dia a dia.
