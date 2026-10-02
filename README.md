@@ -31,11 +31,11 @@ Os principais processos identificados durante o levantamento foram:
 - Recebimento de produtos dos fornecedores;
 - Conferência das quantidades recebidas;
 - Organização e armazenamento dos produtos;
-- Cadastro e consulta de produtos e preços;
+- Consulta e organização de produtos e preços;
 - Controle de compras;
 - Venda de produtos;
 - Registro de vendas fiadas;
-- Controle de produtos retirados em vendas fiadas;
+- Registro dos produtos retirados em vendas fiadas;
 - Abertura de garrafas para venda de doses;
 - Controle das movimentações de entrada e saída do estoque.
 
