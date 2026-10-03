@@ -1,9 +1,10 @@
 # Entrega 1 — Modelo Conceitual (DER)
 ### Modelagem de um sistema de gestão 
 
-## Metadados
+
 - **Nomes dos alunos e RGM**
-  -
+- Kevin Gomes 47796006 
+
 ## 1. Caracterização da Organização
 
 A organização escolhida para o desenvolvimento deste trabalho é a Adega do Tonho, uma adega de bairro de pequeno porte que atua no comércio de bebidas, alimentos, produtos para narguilé, cigarros e outros itens.
