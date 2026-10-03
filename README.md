@@ -60,10 +60,10 @@ O sistema deve permitir cadastrar os produtos comercializados pela adega, inclui
 O sistema deve permitir consultar os produtos cadastrados, seus respectivos preços e as quantidades disponíveis.
 
 -RF03 — Controle de estoque
-O sistema deve permitir consultar a quantidade de cada produto disponível na área de venda e no espaço destinado ao estoque dos fundos da adega.
+O sistema deve permitir consultar a quantidade disponível de cada produto em estoque, considerando a localização geral informada para o armazenamento.
 
--RF04 — Registro de entrada de produtos
-O sistema deve permitir registrar a entrada de produtos recebidos de fornecedores, informando o produto, a quantidade recebida e a data da movimentação.
+-RNF04 — Segurança
+O sistema deve proteger as informações registradas contra acessos não autorizados.
 
 -RF05 — Registro de saída de produtos
 O sistema deve permitir registrar a saída de produtos do estoque, identificando o motivo, como venda, perda, quebra ou vencimento.
@@ -123,6 +123,7 @@ O sistema deve permitir a realização de cópias de segurança dos dados para r
 
 -RNF07 — Compatibilidade
 O sistema deve poder ser utilizado em computadores e dispositivos móveis, como celulares, considerando as necessidades da rotina de atendimento da adega.
+
 
 ## 5. Dicionário de Dados Conceitual (Preliminar)
 
