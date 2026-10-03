@@ -8,9 +8,9 @@
 
 A organização escolhida para o desenvolvimento deste trabalho é a Adega do Tonho, uma adega de bairro de pequeno porte que atua no comércio de bebidas, alimentos, produtos para narguilé, cigarros e outros itens.
 
-O estabelecimento existe há aproximadamente 4 anos e conta com cerca de 3 a 4 pessoas envolvidas nas atividades, de acordo com os dias de funcionamento. O horário de atendimento é das 13h às 23h, de segunda a quinta-feira, e das 13h à meia-noite, de sexta-feira a domingo.
+O estabelecimento existe há aproximadamente 4 anos e conta com cerca de 3 a 4 pessoas envolvidas nas atividades, de acordo com os dias de funcionamento. O horário de atendimento é das 13h00 às 23h00, de segunda a quinta-feira, e das 13h00 à 00h00, de sexta-feira a domingo.
 
-Entre os principais produtos comercializados estão refrigerantes, cervejas, bebidas alcoólicas, doces, salgadinhos, sucos, macarrão instantâneo, produtos básicos de mercearia, itens para narguilé, cigarros e isqueiros.
+Entre os principais produtos comercializados estão refrigerantes, cervejas, bebidas alcoólicas, doces, salgadinhos, sucos, , produtos básicos de mercearia, itens para narguilé, cigarros e isqueiros.
 
 A adega possui uma área na parte da frente destinada ao atendimento e à exposição dos produtos, enquanto a parte dos fundos é utilizada para o armazenamento do estoque. Também existem bebidas separadas para a preparação de doses.
 
@@ -20,7 +20,7 @@ As compras realizadas com fornecedores são registradas pelo celular, contendo o
 
 Durante a rotina do estabelecimento, ocorrem diferenças entre as quantidades anotadas e o estoque real, o que dificulta o acompanhamento preciso dos produtos disponíveis. Além disso, existe certa dificuldade para identificar quais produtos possuem maior volume de vendas, já que as vendas comuns não são registradas individualmente por item.
 
-A pesquisa foi realizada por mim, com base na minha experiência e participação direta na rotina da Adega do Tonho. Atuo como funcionário e gerente, tendo uma participação próxima à administração do estabelecimento, sendo praticamente o terceiro responsável pela adega. Acompanho atividades como atendimento, vendas, organização e conferência do estoque, compras, contato com fornecedores e controle de fiado.
+A pesquisa foi realizada por um dos integrantes do grupo, pois tem experiência e participação direta na rotina da Adega do Tonho. Atua como funcionário e gerente, tendo uma participação próxima à administração do estabelecimento, sendo praticamente o terceiro responsável pela adega. Acompanha atividades como atendimento, vendas, organização e conferência do estoque, compras, contato com fornecedores e controle de fiado.
 
 As informações apresentadas foram levantadas a partir da observação das atividades diárias e do conhecimento dos processos internos, buscando identificar as necessidades reais do negócio e compreender como um sistema de gestão poderia auxiliar na organização das informações, no controle do estoque e no acompanhamento das operações.
 
