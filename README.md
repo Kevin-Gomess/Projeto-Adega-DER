@@ -62,7 +62,7 @@ O sistema deve permitir consultar os produtos cadastrados, seus respectivos pre�
 -RF03 — Controle de estoque
 O sistema deve permitir consultar a quantidade disponível de cada produto em estoque, considerando a localização geral informada para o armazenamento.
 
--RNF04 — Segurança
+-RF04 — Segurança
 O sistema deve proteger as informações registradas contra acessos não autorizados.
 
 -RF05 — Registro de saída de produtos
