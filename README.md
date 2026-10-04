@@ -62,8 +62,8 @@ O sistema deve permitir consultar os produtos cadastrados, seus respectivos pre�
 -RF03 — Controle de estoque
 O sistema deve permitir consultar a quantidade disponível de cada produto em estoque, considerando a localização geral informada para o armazenamento.
 
--RF04 — Segurança
-O sistema deve proteger as informações registradas contra acessos não autorizados.
+-RF04 — Registro de entrada de produtos
+O sistema deve permitir registrar a entrada de produtos no estoque, informando o produto, a quantidade e a data do recebimento.
 
 -RF05 — Registro de saída de produtos
 O sistema deve permitir registrar a saída de produtos do estoque, identificando o motivo, como venda, perda, quebra ou vencimento.
