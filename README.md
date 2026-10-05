@@ -11,7 +11,7 @@ A organização escolhida para o desenvolvimento deste trabalho é a Adega do To
 
 O estabelecimento existe há aproximadamente 4 anos e conta com cerca de 3 a 4 pessoas envolvidas nas atividades, de acordo com os dias de funcionamento. O horário de atendimento é das 13h00 às 23h00, de segunda a quinta-feira, e das 13h00 à 00h00, de sexta-feira a domingo.
 
-Entre os principais produtos comercializados estão refrigerantes, cervejas, bebidas alcoólicas, doces, salgadinhos, sucos, , produtos básicos de mercearia, itens para narguilé, cigarros e isqueiros.
+Entre os principais produtos comercializados estão refrigerantes, cervejas, bebidas alcoólicas, doces, salgadinhos, sucos, produtos básicos de mercearia, itens para narguilé, cigarros e isqueiros.
 
 A adega possui uma área na parte da frente destinada ao atendimento e à exposição dos produtos, enquanto a parte dos fundos é utilizada para o armazenamento do estoque. Também existem bebidas separadas para a preparação de doses.
 
