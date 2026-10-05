@@ -52,53 +52,53 @@ Os fluxos dos principais processos serão apresentados nos fluxogramas disponibi
 
                          3.1 Requisitos Funcionais
 
-- **RF01 — Cadastro de produtos:** O sistema deve permitir cadastrar os produtos comercializados pela adega, incluindo nome, categoria e preço.
+-RF01 — Cadastro de produtos: O sistema deve permitir cadastrar os produtos comercializados pela adega, incluindo nome, categoria e preço.
 
-- **RF02 — Consulta de produtos:** O sistema deve permitir consultar os produtos cadastrados, seus respectivos preços e as quantidades disponíveis.
+-RF02 — Consulta de produtos: O sistema deve permitir consultar os produtos cadastrados, seus respectivos preços e as quantidades disponíveis.
 
-- **RF03 — Controle de estoque:** O sistema deve permitir consultar a quantidade disponível de cada produto em estoque, considerando a localização geral informada para o armazenamento.
+-RF03 — Controle de estoque: O sistema deve permitir consultar a quantidade disponível de cada produto em estoque, considerando a localização geral informada para o armazenamento.
 
-- **RF04 — Registro de entrada de produtos:** O sistema deve permitir registrar a entrada de produtos no estoque, informando o produto, a quantidade e a data do recebimento.
+-RF04 — Registro de entrada de produtos: O sistema deve permitir registrar a entrada de produtos no estoque, informando o produto, a quantidade e a data do recebimento.
 
-- **RF05 — Registro de saída de produtos:** O sistema deve permitir registrar a saída de produtos do estoque, identificando o motivo, como venda, perda, quebra ou vencimento.
+-RF05 — Registro de saída de produtos: O sistema deve permitir registrar a saída de produtos do estoque, identificando o motivo, como venda, perda, quebra ou vencimento.
 
-- **RF06 — Registro de produtos utilizados para doses:** O sistema deve permitir registrar como saída do estoque as bebidas abertas para preparação de doses, atualizando a quantidade disponível.
+-RF06 — Registro de produtos utilizados para doses: O sistema deve permitir registrar como saída do estoque as bebidas abertas para preparação de doses, atualizando a quantidade disponível.
 
-- **RF07 — Registro de vendas:** O sistema deve permitir registrar as vendas realizadas, incluindo os produtos vendidos, suas respectivas quantidades, os preços unitários e o valor total da venda.
+-RF07 — Registro de vendas: O sistema deve permitir registrar as vendas realizadas, incluindo os produtos vendidos, suas respectivas quantidades, os preços unitários e o valor total da venda.
 
-- **RF08 — Registro da forma de pagamento:** O sistema deve permitir registrar uma ou mais formas de pagamento utilizadas em cada venda, considerando Pix, dinheiro, cartão de crédito e cartão de débito.
+-RF08 — Registro da forma de pagamento: O sistema deve permitir registrar uma ou mais formas de pagamento utilizadas em cada venda, considerando Pix, dinheiro, cartão de crédito e cartão de débito.
 
-- **RF09 — Cadastro de clientes que utilizam fiado:** O sistema deve permitir cadastrar clientes que realizam compras por meio de fiado, armazenando seus dados de identificação.
+-RF09 — Cadastro de clientes que utilizam fiado: O sistema deve permitir cadastrar clientes que realizam compras por meio de fiado, armazenando seus dados de identificação.
 
-- **RF10 — Controle de fiado:** O sistema deve permitir registrar cada compra realizada por fiado, vinculando o cliente, os produtos adquiridos, as quantidades e o valor total devido.
+-RF10 — Controle de fiado: O sistema deve permitir registrar cada compra realizada por fiado, vinculando o cliente, os produtos adquiridos, as quantidades e o valor total devido.
 
-- **RF11 — Controle do limite de fiado:** O sistema deve permitir cadastrar e consultar o limite de fiado de cada cliente e impedir a realização de novas compras que ultrapassem o limite disponível.
+-RF11 — Controle do limite de fiado: O sistema deve permitir cadastrar e consultar o limite de fiado de cada cliente e impedir a realização de novas compras que ultrapassem o limite disponível.
 
-- **RF12 — Cadastro de fornecedores:** O sistema deve permitir cadastrar os fornecedores utilizados pela adega, armazenando seus dados de identificação e contato.
+-RF12 — Cadastro de fornecedores: O sistema deve permitir cadastrar os fornecedores utilizados pela adega, armazenando seus dados de identificação e contato.
 
-- **RF13 — Registro de compras:** O sistema deve permitir registrar as compras realizadas com fornecedores, incluindo os produtos, suas quantidades, os preços unitários e o valor total da compra.
+-RF13 — Registro de compras: O sistema deve permitir registrar as compras realizadas com fornecedores, incluindo os produtos, suas quantidades, os preços unitários e o valor total da compra.
 
-- **RF14 — Consulta de produtos com baixa quantidade:** O sistema deve permitir identificar os produtos que estejam com quantidade baixa em estoque ou que necessitem de reposição.
+-RF14 — Consulta de produtos com baixa quantidade: O sistema deve permitir identificar os produtos que estejam com quantidade baixa em estoque ou que necessitem de reposição.
 
-- **RF15 — Consulta de produtos com maior saída:** O sistema deve permitir consultar os produtos com maior quantidade vendida em determinado período, auxiliando no planejamento de reposição e compras.
+-RF15 — Consulta de produtos com maior saída: O sistema deve permitir consultar os produtos com maior quantidade vendida em determinado período, auxiliando no planejamento de reposição e compras.
 
-- **RF16 — Identificação dos funcionários:** O sistema deve permitir cadastrar e identificar os funcionários responsáveis pelas operações realizadas, vinculando-os aos registros de vendas, movimentações de estoque e compras.
+-RF16 — Identificação dos funcionários: O sistema deve permitir cadastrar e identificar os funcionários responsáveis pelas operações realizadas, vinculando-os aos registros de vendas, movimentações de estoque e compras.
 
                                     3.2 Requisitos Não Funcionais
 
-- **RNF01 — Facilidade de uso:** O sistema deve possuir uma interface simples e intuitiva, considerando que atualmente os controles são realizados manualmente por meio de caderno e celular.
+-RNF01 — Facilidade de uso: O sistema deve possuir uma interface simples e intuitiva, considerando que atualmente os controles são realizados manualmente por meio de caderno e celular.
 
-- **RNF02 — Rapidez:** O sistema deve apresentar as informações de produtos e estoque de forma rápida, principalmente durante a rotina de atendimento.
+-RNF02 — Rapidez: O sistema deve apresentar as informações de produtos e estoque de forma rápida, principalmente durante a rotina de atendimento.
 
-- **RNF03 — Integridade das informações:** O sistema deve manter as informações de produtos, vendas, compras e estoque de forma consistente.
+-RNF03 — Integridade das informações: O sistema deve manter as informações de produtos, vendas, compras e estoque de forma consistente.
 
-- **RNF04 — Segurança:** O sistema deve proteger as informações registradas, permitindo acesso às funções de acordo com o nível de autorização definido para cada usuário.
+-RNF04 — Segurança: O sistema deve proteger as informações registradas, permitindo acesso às funções de acordo com o nível de autorização definido para cada usuário.
 
-- **RNF05 — Disponibilidade:** As informações de estoque, produtos, vendas e compras devem estar disponíveis para consulta durante o horário de funcionamento da adega, sempre que forem necessárias.
+-RNF05 — Disponibilidade: As informações de estoque, produtos, vendas e compras devem estar disponíveis para consulta durante o horário de funcionamento da adega, sempre que forem necessárias.
 
-- **RNF06 — Cópia de segurança:** O sistema deve permitir a realização de cópias de segurança dos dados para reduzir o risco de perda das informações registradas.
+-RNF06 — Cópia de segurança: O sistema deve permitir a realização de cópias de segurança dos dados para reduzir o risco de perda das informações registradas.
 
-- **RNF07 — Compatibilidade:** O sistema deve poder ser utilizado em computadores e dispositivos móveis, como celulares, considerando as necessidades da rotina de atendimento da adega.
+-RNF07 — Compatibilidade: O sistema deve poder ser utilizado em computadores e dispositivos móveis, como celulares, considerando as necessidades da rotina de atendimento da adega.
 
 
 
@@ -134,11 +134,11 @@ Os fluxos dos principais processos serão apresentados nos fluxogramas disponibi
 
 -RN15 — Necessidade de reposição: Quando um produto estiver acabando ou tiver acabado, a necessidade de reposição deve ser identificada.
 
-- **RN16 — Responsabilidade pela compra: O funcionário identifica a necessidade e o responsável pela compra realiza o pedido ou a aquisição.
+-RN16 — Responsabilidade pela compra: O funcionário identifica a necessidade e o responsável pela compra realiza o pedido ou a aquisição.
 
-- **RN17 — Fornecedores: A adega utiliza diferentes fornecedores, sendo que alguns realizam entregas e outros são atendidos mediante retirada.
+-RN17 — Fornecedores: A adega utiliza diferentes fornecedores, sendo que alguns realizam entregas e outros são atendidos mediante retirada.
 
-- **RN18 — Organização do estoque: Após a conferência, as mercadorias devem ser armazenadas e organizadas no estoque.
+-RN18 — Organização do estoque: Após a conferência, as mercadorias devem ser armazenadas e organizadas no estoque.
 
 
 
