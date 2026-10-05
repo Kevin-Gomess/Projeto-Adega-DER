@@ -603,24 +603,3 @@ O nosso grupo realizou a conferência das sugestões antes de utilizá-las no pr
 
                       
 
-## Critérios Atitudinais (20%)
-
-A equipe deverá demonstrar participação, organização, colaboração e responsabilidade durante o desenvolvimento da atividade.
-
-Também será considerada a participação dos integrantes nas etapas de levantamento de informações, análise, documentação e desenvolvimento da modelagem.
-
-As evidências relacionadas à participação e ao desenvolvimento do trabalho poderão ser apresentadas juntamente com os demais materiais da entrega.
-
-## Resumo dos Pesos
-
-- Caracterização da Organização e evidências: conforme critérios definidos na atividade.
-- Processos de Negócio: conforme critérios definidos na atividade.
-- Requisitos do Sistema: conforme critérios definidos na atividade.
-- Regras de Negócio: conforme critérios definidos na atividade.
-- Dicionário de Dados Conceitual: conforme critérios definidos na atividade.
-- DER e Justificativa Técnica: **20%**.
-- Critérios Atitudinais: **20%**.
-
-A entrega deverá conter os documentos e evidências solicitados, respeitando as orientações apresentadas na atividade.
-
-**Observação:** Não devem ser utilizados dados pessoais reais ou informações sensíveis da organização ou de seus clientes. Quando necessário, devem ser utilizados dados fictícios para exemplificação.
