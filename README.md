@@ -125,6 +125,44 @@ O sistema deve permitir a realização de cópias de segurança dos dados para r
 O sistema deve poder ser utilizado em computadores e dispositivos móveis, como celulares, considerando as necessidades da rotina de atendimento da adega.
 
 
+
+# 4. Regras de Negócio
+
+-RN01 — Produtos pertencem a categorias
+
+-RN02 — Uma venda pode conter vários produtos
+
+-RN03 — Formas de pagamento
+
+-RN04 — Conferência do pagamento
+
+-RN05 — Venda gera saída de estoque
+
+-RN06 — Produtos utilizados para doses geram saída de estoque
+
+-RN07 — Perdas geram saída de estoque
+
+-RN08 — Controle de fiado
+
+-RN09 — Limite do fiado
+
+-RN10 — Registro de itens do fiado
+
+-RN11 — Compras devem registrar produtos e quantidades
+
+-RN12 — Registro dos valores das compras
+
+-RN13 — Conferência das mercadorias recebidas
+
+-RN14 — Tratamento de mercadoria incorreta ou faltante
+
+-RN15 — Necessidade de reposição
+
+-RN16 — Responsabilidade pela compra
+
+-RN18 — Organização do estoque
+
+
 ## 5. Dicionário de Dados Conceitual (Preliminar)
 
 O dicionário de dados conceitual será desenvolvido separadamente, conforme solicitado na atividade, utilizando HTML.
