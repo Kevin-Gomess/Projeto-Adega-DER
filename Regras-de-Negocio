@@ -1,37 +1,37 @@
                                   REGRAS DE NEGÓCIO 
 
--RN01 — Produtos pertencem a categorias
+-RN01 — Produtos pertencem a categorias: Cada produto deve estar relacionado a uma categoria.
 
--RN02 — Uma venda pode conter vários produtos
+-RN02 — Uma venda pode conter vários produtos: Uma venda pode incluir um ou mais produtos.
 
--RN03 — Formas de pagamento
+-RN03 — Formas de pagamento: As vendas podem ser pagas por Pix, dinheiro, cartão de crédito ou cartão de débito.
 
--RN04 — Conferência do pagamento
+-RN04 — Conferência do pagamento: O pagamento deve ser conferido conforme a forma utilizada.
 
--RN05 — Venda gera saída de estoque
+-RN05 — Venda gera saída de estoque: A venda de um produto representa uma saída de estoque.
 
--RN06 — Produtos utilizados para doses geram saída de estoque
+-RN06 — Produtos utilizados para doses geram saída de estoque: A abertura de uma garrafa para preparação de doses representa uma saída/movimentação de estoque.
 
--RN07 — Perdas geram saída de estoque
+-RN07 — Perdas geram saída de estoque: Produtos quebrados, vencidos ou perdidos devem ser retirados do estoque.
 
--RN08 — Controle de fiado
+-RN08 — Controle de fiado: Compras realizadas por fiado devem ser vinculadas ao cliente e registradas para pagamento posterior.
 
--RN09 — Limite do fiado
+-RN09 — Limite do fiado: O limite disponível do cliente não deve ser ultrapassado.
 
--RN10 — Registro de itens do fiado
+-RN10 — Registro de itens do fiado: Devem ser identificados os produtos, quantidades e valores de cada compra realizada por fiado.
 
--RN11 — Compras devem registrar produtos e quantidades
+-RN11 — Compras devem registrar produtos e quantidades: Cada compra deve registrar os produtos adquiridos e suas quantidades.
 
--RN12 — Registro dos valores das compras
+-RN12 — Registro dos valores das compras: As compras devem considerar os preços unitários e o valor total.
 
--RN13 — Conferência das mercadorias recebidas
+-RN13 — Conferência das mercadorias recebidas: As mercadorias recebidas devem ser conferidas individualmente.
 
--RN14 — Tratamento de mercadoria incorreta ou faltante
+-RN14 — Tratamento de mercadoria incorreta ou faltante: Quando houver erro ou falta, o fornecedor deve ser contatado para troca ou complemento.
 
--RN15 — Necessidade de reposição
+-RN15 — Necessidade de reposição: Quando um produto estiver acabando ou tiver acabado, a necessidade de reposição deve ser identificada.
 
--RN16 — Responsabilidade pela compra
+-RN16 — Responsabilidade pela compra: O funcionário identifica a necessidade e o responsável pela compra realiza o pedido ou a aquisição.
 
--RN17 — Fornecedores
+-RN17 — Fornecedores: A adega utiliza diferentes fornecedores, sendo que alguns realizam entregas e outros são atendidos mediante retirada.
 
--RN18 — Organização do estoque
+-RN18 — Organização do estoque: Após a conferência, as mercadorias devem ser armazenadas e organizadas no estoque.
