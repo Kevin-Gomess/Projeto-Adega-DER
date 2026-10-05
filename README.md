@@ -160,6 +160,8 @@ O sistema deve poder ser utilizado em computadores e dispositivos móveis, como 
 
 -RN16 — Responsabilidade pela compra
 
+-RN17 — Fornecedores
+
 -RN18 — Organização do estoque
 
 
