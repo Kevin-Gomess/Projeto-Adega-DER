@@ -144,7 +144,7 @@ Os fluxos dos principais processos serão apresentados nos fluxogramas disponibi
 
 ## 5. Dicionário de Dados Conceitual (Preliminar) 
 
-O arquivo será disponibilizado separadamente neste projeto como **Dicionario_de_dado.md**.
+O arquivo será disponibilizado separadamente neste projeto como ""Dicionario_de_dado.md"".
 
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 
@@ -322,7 +322,7 @@ Representa as empresas ou pessoas que fornecem produtos para a adega.
 
 
 
-O arquivo do DER será disponibilizado na pasta **Modelagem** , no arquivo ** DER_Adega.md** deste projeto.
+O arquivo do DER será disponibilizado na pasta **Modelagem** , no arquivo  ""DER_Adega.md"" deste projeto.
 
 ## 8. Justificativa Técnica
 
