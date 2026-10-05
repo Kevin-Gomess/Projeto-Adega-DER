@@ -143,7 +143,7 @@
 <tr><td>id_movimentacao</td><td>ID da movimentação</td><td>Único</td><td>4</td></tr>
 <tr><td>id_produto</td><td>Produto</td><td>Deve existir</td><td>10</td></tr>
 <tr><td>id_funcionario</td><td>Funcionário</td><td>Deve existir</td><td>3</td></tr>
-<tr><td>tipo_movimentacao</td><td>Entrada ou saída</td><td>Valor permitido</td><td>Entrada</td></tr>
+<tr><td>tipo_movimentacao</td><td>Entrada , saída ou ajuste</td><td>Valor permitido</td><td>Entrada</td></tr>
 <tr><td>quantidade</td><td>Quantidade</td><td>Maior que 0</td><td>20</td></tr>
 <tr><td>motivo</td><td>Motivo</td><td>Obrigatório</td><td>Reposição</td></tr>
 <tr><td>data_movimentacao</td><td>Data</td><td>Obrigatória</td><td>01/10/2026</td></tr>
