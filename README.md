@@ -146,7 +146,7 @@ Os fluxos dos principais processos serão apresentados nos fluxogramas disponibi
 
 ## 5. Dicionário de Dados Conceitual (Preliminar) 
 
-O arquivo será disponibilizado separadamente neste projeto como ""Dicionario_de_dado.md"".
+O arquivo será disponibilizado separadamente neste projeto como ""Dicionario_de_dado.html"".
 
 ## 6. Modelagem Conceitual (Entidades, Atributos, Relacionamentos)
 
