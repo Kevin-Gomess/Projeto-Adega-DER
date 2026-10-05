@@ -104,6 +104,8 @@ Os fluxos dos principais processos serão apresentados nos fluxogramas disponibi
 
 # 4. Regras de Negócio
 
+                REGRAS DE NEGÓCIO 
+
 -RN01 — Produtos pertencem a categorias: Cada produto deve estar relacionado a uma categoria.
 
 -RN02 — Uma venda pode conter vários produtos: Uma venda pode incluir um ou mais produtos.
