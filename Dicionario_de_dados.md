@@ -103,7 +103,9 @@
 <tr><td>id_produto</td><td>Produto</td><td>Deve existir</td><td>10</td></tr>
 <tr><td>quantidade</td><td>Quantidade</td><td>Maior que 0</td><td>3</td></tr>
 <tr><td>preco_unitario</td><td>Preço por unidade</td><td>Não negativo</td><td>8,50</td></tr>
+<tr><td>subtotal</td><td>Total do item</td><td>Deve corresponder à quantidade multiplicada pelo preço unitário</td><td>25,50</td></tr>
 </table>
+
 
 <h2>PAGAMENTO_FIADO</h2>
 <table border="1">
