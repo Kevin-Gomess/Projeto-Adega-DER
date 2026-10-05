@@ -320,7 +320,8 @@ Representa as empresas ou pessoas que fornecem produtos para a adega.
 
 ## 7. Diagrama Entidade-Relacionamento (DER)
 
-<img width="1448" height="1086" alt="finall5" src="https://github.com/user-attachments/assets/9fd72d8a-af0e-4d5b-ba8a-1e98f05bd6f1" />
+<img width="1448" height="1086" alt="diagram2" src="https://github.com/user-attachments/assets/63eabb78-76f4-4304-9159-283218339e67" />
+
 
 
 
