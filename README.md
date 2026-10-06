@@ -334,7 +334,7 @@ Representa as empresas ou pessoas que fornecem produtos para a adega.
 
 
 
-O arquivo do DER será disponibilizado na pasta **Modelagem** , no arquivo  ""DER_Adega.md"" deste projeto.
+O arquivo do DER será disponibilizado na pasta **Modelagem** , no arquivo  ""DER_Adega.png"" deste projeto.
 
 ## 8. Justificativa Técnica
 
