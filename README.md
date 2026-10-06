@@ -3,7 +3,11 @@
 
 
 - **Nomes dos alunos e RGM**
-- Kevin Gomes 47796006 
+- Kevin Gomes 47796006
+- Brayan Antonio Daza Paredes 48892009
+-Gabriel dos Santos eufrasio  49005260
+ -Gabriel Gonçalves Moura  48892009
+  -Felipe militao 049331108
 
 ## 1. Caracterização da Organização
 
