@@ -23,7 +23,7 @@ Aqui está a tabela refeita, incluindo Abertura de caixa como processo próprio 
 ---
 
 
-## 11. Fechamento de caixa
+## 11. Abertura e fechamento de caixa
 
 Quem participa: funcionário do caixa e gerente. O sistema calcula o dinheiro esperado e a diferença.
 
