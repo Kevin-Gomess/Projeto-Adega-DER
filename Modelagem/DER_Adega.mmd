@@ -1,0 +1,168 @@
+erDiagram
+    CATEGORIA ||--o{ PRODUTO : "classifica"
+    PRODUTO ||--|| ESTOQUE : "possui"
+    PRODUTO ||--o{ MOVIMENTACAO_ESTOQUE : "é movimentado em"
+    FUNCIONARIO ||--o{ MOVIMENTACAO_ESTOQUE : "registra"
+    LOTE |o--o{ MOVIMENTACAO_ESTOQUE : "é baixado em"
+    ITEM_COMPRA ||--o| LOTE : "origina"
+    FUNCIONARIO ||--o{ ESCALA : "cumpre"
+    FUNCIONARIO ||--o{ CAIXA : "abre"
+    FUNCIONARIO ||--o{ VENDA : "realiza"
+    CAIXA ||--o{ VENDA : "agrupa"
+    VENDA ||--|{ ITEM_VENDA : "contém"
+    PRODUTO ||--o{ ITEM_VENDA : "é vendido em"
+    VENDA ||--|{ PAGAMENTO : "é paga por"
+    FIADO |o--o{ PAGAMENTO : "lança"
+    CLIENTE ||--o{ FIADO : "possui"
+    FIADO ||--|{ ITEM_FIADO : "contém"
+    PRODUTO ||--o{ ITEM_FIADO : "é lançado em"
+    FIADO ||--o{ PAGAMENTO_FIADO : "recebe"
+    CAIXA ||--o{ PAGAMENTO_FIADO : "recebe"
+    FORNECEDOR ||--o{ COMPRA : "fornece"
+    FUNCIONARIO ||--o{ COMPRA : "realiza"
+    COMPRA ||--|{ ITEM_COMPRA : "contém"
+    PRODUTO ||--o{ ITEM_COMPRA : "é comprado em"
+
+    CATEGORIA {
+        int id_categoria PK
+        string nm_categoria UK
+        bool fl_restrita_maiores
+    }
+    PRODUTO {
+        int id_produto PK
+        string cd_barras UK
+        string nm_produto
+        decimal vl_venda
+        bool fl_vende_dose
+        int qt_ml_garrafa
+        int qt_ml_dose
+        decimal vl_dose
+        bool fl_ativo
+    }
+    ESTOQUE {
+        int id_estoque PK
+        int qt_atual
+        int qt_minima
+        datetime dt_atualizacao
+    }
+    FUNCIONARIO {
+        int id_funcionario PK
+        string nm_funcionario
+        string nr_cpf UK
+        enum tp_cargo
+        string ds_login UK
+        string ds_senha_hash
+        date dt_admissao
+        bool fl_ativo
+    }
+    ESCALA {
+        int id_escala PK
+        date dt_turno
+        time hr_inicio
+        time hr_fim
+        string ds_funcao
+    }
+    CLIENTE {
+        int id_cliente PK
+        string nm_cliente
+        string nr_cpf UK
+        date dt_nascimento
+        string nr_telefone
+        decimal vl_limite_fiado
+        bool fl_bloqueado
+        datetime dt_consentimento_lgpd
+        datetime dt_cadastro
+    }
+    CAIXA {
+        int id_caixa PK
+        datetime dt_abertura
+        datetime dt_fechamento
+        decimal vl_troco_inicial
+        decimal vl_esperado
+        decimal vl_contado
+        decimal vl_diferenca
+        enum st_caixa
+        string ds_observacao
+    }
+    VENDA {
+        int id_venda PK
+        datetime dt_venda
+        decimal vl_desconto
+        decimal vl_total
+        enum st_venda
+        string nr_documento_fiscal
+        bool fl_maioridade_conferida
+    }
+    FIADO {
+        int id_fiado PK
+        datetime dt_abertura
+        date dt_vencimento
+        decimal vl_total
+        decimal vl_pago
+        enum st_fiado
+    }
+    ITEM_VENDA {
+        int id_item_venda PK
+        enum tp_item
+        int qt_item
+        decimal vl_unitario
+        decimal vl_subtotal
+    }
+    PAGAMENTO {
+        int id_pagamento PK
+        enum tp_forma
+        decimal vl_pago
+        datetime dt_pagamento
+    }
+    ITEM_FIADO {
+        int id_item_fiado PK
+        enum tp_item
+        int qt_item
+        decimal vl_unitario
+        decimal vl_subtotal
+        datetime dt_lancamento
+    }
+    PAGAMENTO_FIADO {
+        int id_pagamento_fiado PK
+        enum tp_forma
+        decimal vl_pago
+        datetime dt_pagamento
+    }
+    FORNECEDOR {
+        int id_fornecedor PK
+        string nm_fornecedor
+        string nr_cnpj UK
+        string nr_telefone
+        enum tp_fornecimento
+        bool fl_ativo
+    }
+    COMPRA {
+        int id_compra PK
+        datetime dt_pedido
+        datetime dt_recebimento
+        enum tp_recebimento
+        string nr_nota_fiscal
+        decimal vl_total
+        enum st_compra
+    }
+    ITEM_COMPRA {
+        int id_item_compra PK
+        int qt_pedida
+        int qt_recebida
+        decimal vl_custo
+        bool fl_conferido
+        string ds_divergencia
+    }
+    LOTE {
+        int id_lote PK
+        string nr_lote
+        date dt_validade
+        int qt_disponivel
+    }
+    MOVIMENTACAO_ESTOQUE {
+        int id_movimentacao PK
+        enum tp_movimento
+        int qt_movimentada
+        string ds_motivo
+        datetime dt_movimentacao
+    }
