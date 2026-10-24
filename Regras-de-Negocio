@@ -1,75 +1,118 @@
-A. Vendas e pagamentos
-ID	Regra de negócio	Processo relacionado	Onde se aplica
-RN01	Toda venda registrada no sistema deve estar associada a um funcionário identificado. Se o sistema utilizar controle de caixa, a venda deverá ser vinculada a um caixa aberto.	Venda no balcão	VENDA, FUNCIONARIO, CAIXA
-RN02	O sistema deve permitir registrar pagamentos em dinheiro, Pix, cartão de débito e cartão de crédito. O fiado deve ser tratado como uma dívida, com registro próprio. Uma venda poderá utilizar mais de uma forma de pagamento, se essa opção for adotada pelo grupo.	Pagamento	PAGAMENTO, FIADO
-RN03	Uma venda paga integralmente só poderá ser concluída quando a soma dos pagamentos registrados corresponder ao valor total da venda. Vendas fiadas devem seguir as regras específicas de fiado.	Pagamento	VENDA, PAGAMENTO, FIADO
-RN04	O preço unitário aplicado a cada item deve ficar registrado no momento da venda. Uma alteração posterior no cadastro do produto não deve modificar vendas anteriores.	Venda no balcão; consulta de preços	PRODUTO, ITEM_VENDA
-RN05	Quando uma venda registrada for concluída, o sistema deverá registrar a saída correspondente dos produtos vendidos no controle de estoque.	Venda no balcão; movimentação de estoque	ITEM_VENDA, MOVIMENTACAO_ESTOQUE, ESTOQUE
-RN06	Para vender doses, o produto deverá estar cadastrado como permitido para venda por dose. A abertura de uma garrafa para esse uso deverá ser registrada como saída do estoque; as doses retiradas dessa garrafa não deverão causar uma nova baixa da garrafa inteira a cada venda.	Venda de doses	PRODUTO, ITEM_VENDA, MOVIMENTACAO_ESTOQUE
-RN07	O cancelamento de uma venda concluída deverá ser autorizado por usuário com permissão adequada e registrado. Se os produtos já tiverem sido baixados do estoque, o sistema deverá registrar a movimentação de correção correspondente.	Venda no balcão; movimentação de estoque	VENDA, MOVIMENTACAO_ESTOQUE, LOG_ACESSO
+# Regras de Negócio — Adega do Tonho
 
+## Objetivo
 
-B. Fiado, cobrança e quitação
-ID	Regra de negócio	Processo relacionado	Onde se aplica
-RN08	Para registrar uma compra fiada, o sistema deverá identificar o cliente e verificar as condições definidas pelo estabelecimento. A exigência de cadastro, idade, consentimento e bloqueio deverá ser configurada de acordo com as regras aprovadas e a legislação aplicável.	Venda fiada	CLIENTE, FIADO
-RN09	Todo registro de fiado deverá estar associado a um cliente identificado.	Venda fiada	FIADO, CLIENTE
-RN10	Antes de autorizar uma nova compra fiada, o sistema deverá comparar a dívida em aberto somada ao novo valor com o limite definido para o cliente. Se o limite for ultrapassado, a operação deverá ser recusada ou encaminhada para autorização conforme a política aprovada pelo estabelecimento.	Venda fiada	CLIENTE, FIADO
-RN11	Cada item incluído em uma compra fiada deverá registrar o produto, a quantidade e o preço aplicado, para permitir a conferência dos valores pelo cliente.	Venda fiada	ITEM_FIADO, PRODUTO
-RN12	O prazo para pagamento do fiado deverá ser definido pelo estabelecimento e registrado no sistema. O prazo de 30 dias é apenas uma proposta e não deve ser considerado uma regra confirmada sem aprovação. O tratamento de dívidas vencidas também deverá seguir a política aprovada.	Cobrança e quitação do fiado	FIADO
-RN13	O sistema deverá permitir registrar pagamentos totais ou parciais do fiado. Cada pagamento deverá reduzir o saldo devedor correspondente. Quando a dívida estiver integralmente paga, o registro deverá ser marcado como quitado.	Cobrança e quitação do fiado	PAGAMENTO_FIADO, FIADO
+Este documento apresenta as regras de negócio identificadas a partir da pesquisa de campo realizada na Adega do Tonho e as regras propostas para o sistema de gestão de informações.
 
+As regras orientam o funcionamento dos processos de venda, pagamento, fiado, estoque, compras, fornecedores, caixa e equipe. Também consideram restrições legais, segurança e proteção dos dados.
 
-C. Estoque, perdas e validade
-ID	Regra de negócio	Processo relacionado	Onde se aplica
-RN14	As entradas e saídas do estoque deverão ser registradas por movimentações identificáveis. O sistema deverá preservar o histórico dessas movimentações e restringir alterações ou exclusões indevidas.	Movimentação de estoque	MOVIMENTACAO_ESTOQUE, ESTOQUE
-RN15	Perdas e quebras deverão ser registradas com quantidade e motivo, como quebra, avaria ou vencimento. A necessidade de aprovação do gerente deverá ser definida na política de acesso do sistema.	Perdas e quebras	MOVIMENTACAO_ESTOQUE, LOG_ACESSO
-RN16	O sistema poderá sinalizar a necessidade de reposição quando a quantidade disponível atingir ou ficar abaixo do estoque mínimo cadastrado. Funcionários também poderão registrar a necessidade identificada visualmente.	Controle de compras	ESTOQUE, PRODUTO
-RN17	Para os produtos controlados por lote e validade, o sistema deverá registrar a data de validade de cada lote. Produtos vencidos deverão ser impedidos de venda e registrados como perda. Um aviso de 30 dias antes do vencimento é uma proposta, que precisa ser aprovada pelo grupo. A retirada dos lotes deverá priorizar os que vencem primeiro, quando aplicável.	Controle de validade	LOTE, MOVIMENTACAO_ESTOQUE, PRODUTO
+**Importante:** as regras descrevem o comportamento esperado do sistema proposto. Quando uma regra depende de uma decisão do estabelecimento ou do grupo, isso é indicado no próprio texto.
 
+---
 
-D. Compras e fornecedores
-ID	Regra de negócio	Processo relacionado	Onde se aplica
-RN18	A necessidade de reposição poderá ser identificada pelos funcionários. A realização ou autorização da compra deverá seguir a responsabilidade definida pelo estabelecimento.	Controle de compras	COMPRA, FUNCIONARIO, FORNECEDOR
-RN19	O sistema deverá permitir registrar o modo de recebimento da compra, como entrega pelo fornecedor ou retirada pelo estabelecimento, quando essa informação for pertinente.	Fornecedores; controle de compras	FORNECEDOR, COMPRA
-RN20	No recebimento, os itens deverão ser conferidos quanto às quantidades e às condições recebidas antes de serem considerados disponíveis no estoque. A referência à nota fiscal deve ser mantida quando houver documento aplicável.	Recebimento e conferência	COMPRA, ITEM_COMPRA, ESTOQUE
-RN21	Quando forem identificados itens errados, faltantes ou avariados, a divergência deverá ser registrada e tratada com o fornecedor. Somente as quantidades efetivamente aceitas deverão ser consideradas disponíveis no estoque.	Recebimento e conferência	COMPRA, ITEM_COMPRA, FORNECEDOR
+## A. Vendas e pagamentos
 
+| ID | Regra de negócio | Processo relacionado | Onde se aplica |
+|---|---|---|---|
+| RN01 | Toda venda registrada no sistema deverá estar associada a um funcionário identificado. Se o sistema utilizar controle de caixa, a venda deverá ser vinculada a um caixa aberto. | Venda no balcão | VENDA, FUNCIONARIO, CAIXA |
+| RN02 | O sistema deverá permitir registrar pagamentos em dinheiro, Pix, cartão de débito e cartão de crédito. O fiado deverá ser tratado como uma dívida, com registro próprio. Uma venda poderá utilizar mais de uma forma de pagamento, conforme a funcionalidade definida pelo grupo. | Pagamento | VENDA, PAGAMENTO, FIADO |
+| RN03 | Uma venda paga integralmente somente poderá ser concluída quando a soma dos pagamentos registrados corresponder ao valor total da venda. Vendas fiadas deverão seguir as regras específicas de controle de dívida. | Pagamento | VENDA, PAGAMENTO, FIADO |
+| RN04 | O preço unitário aplicado a cada item deverá ser registrado no momento da venda. Uma alteração posterior no cadastro do produto não poderá modificar o valor registrado em vendas anteriores. | Venda no balcão; consulta de preços | PRODUTO, ITEM_VENDA |
+| RN05 | Quando uma venda registrada for concluída, o sistema deverá registrar a saída correspondente dos produtos vendidos no controle de estoque. | Venda no balcão; movimentação de estoque | ITEM_VENDA, MOVIMENTACAO_ESTOQUE, ESTOQUE |
+| RN06 | Para vender doses, o produto deverá estar cadastrado como permitido para essa modalidade. A abertura de uma garrafa para esse uso deverá ser registrada como saída do estoque. As doses retiradas dessa garrafa não deverão gerar uma nova baixa da garrafa inteira a cada venda. | Venda de doses | PRODUTO, ITEM_VENDA, MOVIMENTACAO_ESTOQUE |
+| RN07 | O cancelamento de uma venda concluída deverá ser autorizado por usuário com permissão adequada e registrado no histórico. Se os produtos já tiverem sido baixados do estoque, o sistema deverá registrar a movimentação de correção correspondente. | Venda no balcão; movimentação de estoque | VENDA, MOVIMENTACAO_ESTOQUE, LOG_ACESSO |
 
-E. Caixa e equipe
-ID	Regra de negócio	Processo relacionado	Onde se aplica
-RN22	Se o sistema possuir controle de caixa, a abertura deverá registrar o funcionário responsável, a data e hora e o valor inicial informado. A regra sobre quantos caixas podem permanecer abertos simultaneamente deverá ser confirmada pelo grupo.	Abertura e fechamento de caixa	CAIXA, FUNCIONARIO
-RN23	No fechamento do caixa, o sistema deverá permitir registrar o valor contado, comparar esse valor com o esperado e registrar eventuais diferenças. A exigência de justificativa ou conferência pelo gerente deverá seguir a política definida pelo estabelecimento.	Fechamento de caixa	CAIXA, FUNCIONARIO
-RN24	Um caixa marcado como fechado não deverá aceitar novas vendas ou recebimentos vinculados àquele caixa.	Fechamento de caixa	CAIXA, VENDA, PAGAMENTO_FIADO
-RN25	A escala deverá permitir registrar os funcionários, os dias, os horários e as funções de cada turno. A quantidade de pessoas por turno deverá refletir a organização real da adega ou uma proposta formalmente aprovada. Não se deve assumir um mínimo de duas pessoas por turno, pois a pesquisa informa que há dias em que uma pessoa trabalha sozinha.	Escala dos funcionários	ESCALA, FUNCIONARIO
+## B. Fiado, cobrança e quitação
 
+| ID | Regra de negócio | Processo relacionado | Onde se aplica |
+|---|---|---|---|
+| RN08 | Para registrar uma compra fiada, o sistema deverá identificar o cliente e verificar as condições definidas pelo estabelecimento. As regras de cadastro, restrição, bloqueio e tratamento dos dados deverão seguir a política aprovada e a legislação aplicável. | Venda fiada | CLIENTE, FIADO |
+| RN09 | Todo registro de fiado deverá estar associado a um cliente identificado. | Venda fiada | FIADO, CLIENTE |
+| RN10 | Antes de autorizar uma nova compra fiada, o sistema deverá comparar a dívida em aberto somada ao novo valor com o limite definido para o cliente. Se o limite for ultrapassado, a operação deverá ser recusada ou encaminhada para autorização, conforme a política aprovada pelo estabelecimento. | Venda fiada | CLIENTE, FIADO |
+| RN11 | Cada item incluído em uma compra fiada deverá registrar o produto, a quantidade e o preço aplicado, permitindo conferir os valores da dívida. | Venda fiada | ITEM_FIADO, PRODUTO |
+| RN12 | O prazo para pagamento do fiado deverá ser definido pelo estabelecimento e registrado no sistema. O prazo de 30 dias é apenas uma proposta e não deverá ser considerado uma regra confirmada sem aprovação. O tratamento de dívidas vencidas também deverá seguir a política aprovada. | Cobrança e quitação do fiado | FIADO |
+| RN13 | O sistema deverá permitir registrar pagamentos totais ou parciais do fiado. Cada pagamento deverá reduzir o saldo devedor correspondente. Quando a dívida estiver integralmente paga, o registro deverá ser marcado como quitado. | Cobrança e quitação do fiado | PAGAMENTO_FIADO, FIADO |
 
-F. Restrições legais, privacidade e acesso
-As regras desta seção descrevem restrições que devem ser consideradas no sistema. A aplicação concreta de obrigações fiscais e legais deve ser conferida com fontes oficiais e, quando necessário, com o contador ou profissional responsável.
-ID	Regra de negócio	Fundamento ou referência	Como o sistema pode apoiar
-RN26	É proibido vender, fornecer ou entregar bebida alcoólica a menores de 18 anos. Quando houver dúvida sobre a idade, deverá ser solicitada a verificação de documento oficial.	Estatuto da Criança e do Adolescente, art. 243, com alterações legais aplicáveis.	Classificação de produtos com restrição etária e registro da conferência quando necessário.
-RN27	A venda de cigarros e outros produtos de tabaco deve respeitar as restrições legais aplicáveis, incluindo a proibição de fornecimento a menores de 18 anos.	Legislação brasileira aplicável à proteção de crianças e adolescentes e aos produtos de tabaco.	Classificação dos produtos com restrição etária e procedimentos de conferência.
-RN28	A emissão do documento fiscal aplicável deverá seguir o regime tributário do estabelecimento e a legislação vigente. Os dados fiscais a armazenar devem ser definidos com orientação contábil.	Regras fiscais federais e estaduais aplicáveis ao estabelecimento.	Permitir registrar os dados do documento fiscal quando esse recurso fizer parte do escopo do sistema.
-RN29	Os dados pessoais de clientes devem ser limitados ao necessário para a finalidade informada, protegidos contra acesso indevido e tratados conforme a Lei Geral de Proteção de Dados Pessoais (LGPD). O consentimento não deve ser presumido como a única base legal possível: a base adequada precisa ser definida para cada tratamento.	Lei nº 13.709/2018 (LGPD).	Restringir acessos, proteger dados, registrar finalidades e permitir o atendimento dos direitos aplicáveis aos titulares.
-RN30	O sistema deverá permitir definir permissões por perfil de usuário. Ações sensíveis, como alteração de preços, ajustes de estoque, mudança de limite de fiado, cancelamentos e acesso a dados pessoais, deverão ser protegidas; o registro de auditoria deverá ser aplicado conforme o escopo definido.	Política de segurança proposta para o sistema.	Perfis de acesso e, quando implementado, registro de auditoria com usuário, data, hora e ação.
+## C. Estoque, perdas e validade
 
+| ID | Regra de negócio | Processo relacionado | Onde se aplica |
+|---|---|---|---|
+| RN14 | As entradas e saídas do estoque deverão ser registradas por movimentações identificáveis. O sistema deverá preservar o histórico dessas movimentações e restringir alterações ou exclusões indevidas. | Movimentação de estoque | MOVIMENTACAO_ESTOQUE, ESTOQUE |
+| RN15 | Perdas e quebras deverão ser registradas com quantidade e motivo, como quebra, avaria ou vencimento. A necessidade de aprovação do gerente deverá ser definida na política de acesso do sistema. | Perdas e quebras | MOVIMENTACAO_ESTOQUE, LOG_ACESSO |
+| RN16 | O sistema poderá sinalizar a necessidade de reposição quando a quantidade disponível atingir ou ficar abaixo do estoque mínimo cadastrado. Os funcionários também poderão registrar necessidades identificadas visualmente. | Controle de compras | ESTOQUE, PRODUTO |
+| RN17 | Para os produtos controlados por lote e validade, o sistema deverá registrar a data de validade de cada lote. Produtos vencidos deverão ser impedidos de venda e registrados como perda. Um aviso de 30 dias antes do vencimento é uma proposta que precisa ser aprovada pelo grupo. Quando aplicável, a retirada dos lotes deverá priorizar os produtos com vencimento mais próximo. | Controle de validade | LOTE, MOVIMENTACAO_ESTOQUE, PRODUTO |
 
-Cobertura dos pontos indicados na avaliação
-Ponto indicado pelo professor	Regra relacionada
-Formas de pagamento	RN02
-Venda gera saída de estoque	RN05
-Abertura de garrafa para doses	RN06
-Cobrança e quitação do fiado	RN12 e RN13
-Perdas e quebras	RN15
-Identificação da reposição	RN16
-Controle de validade	RN17
-Responsabilidade por compras	RN18
-Entrega ou retirada de fornecedores	RN19
-Conferência de mercadorias	RN20
-Tratamento de itens errados, faltantes ou avariados	RN21
-Abertura e fechamento de caixa	RN22 a RN24
-Escala de funcionários	RN25
-Proibição de venda de álcool a menores	RN26
-Restrição etária para tabaco	RN27
-Documento fiscal	RN28
-Proteção de dados pessoais (LGPD)	RN29
-Perfis de acesso e auditoria	RN30
+## D. Compras e fornecedores
+
+| ID | Regra de negócio | Processo relacionado | Onde se aplica |
+|---|---|---|---|
+| RN18 | A necessidade de reposição poderá ser identificada pelos funcionários. A realização ou autorização da compra deverá seguir a responsabilidade definida pelo estabelecimento. | Controle de compras | COMPRA, FUNCIONARIO, FORNECEDOR |
+| RN19 | O sistema deverá permitir registrar o modo de recebimento da compra, como entrega pelo fornecedor ou retirada pelo estabelecimento, quando essa informação for pertinente. | Fornecedores; controle de compras | FORNECEDOR, COMPRA |
+| RN20 | No recebimento, os itens deverão ser conferidos quanto às quantidades e às condições antes de serem considerados disponíveis no estoque. A referência à nota fiscal deverá ser mantida quando houver documento aplicável. | Recebimento e conferência | COMPRA, ITEM_COMPRA, ESTOQUE |
+| RN21 | Quando forem identificados itens errados, faltantes ou avariados, a divergência deverá ser registrada e tratada com o fornecedor. Somente as quantidades efetivamente aceitas deverão ser consideradas disponíveis no estoque. | Recebimento e conferência | COMPRA, ITEM_COMPRA, FORNECEDOR |
+
+## E. Caixa e equipe
+
+| ID | Regra de negócio | Processo relacionado | Onde se aplica |
+|---|---|---|---|
+| RN22 | A abertura do caixa deverá registrar o funcionário responsável, a data e hora e o valor inicial em dinheiro informado. A regra sobre quantos caixas poderão permanecer abertos simultaneamente deverá ser confirmada pelo grupo. | Abertura de caixa | CAIXA, FUNCIONARIO |
+| RN23 | Durante o expediente, as vendas e os recebimentos em dinheiro vinculados ao caixa deverão ser registrados para permitir calcular o saldo esperado. Os recebimentos de fiado em dinheiro deverão ser considerados nesse cálculo. | Operação do caixa | CAIXA, VENDA, PAGAMENTO, PAGAMENTO_FIADO |
+| RN24 | No fechamento do caixa, o funcionário responsável deverá informar o valor contado em dinheiro. O sistema deverá comparar esse valor com o esperado, considerando o valor inicial, as entradas e as saídas em dinheiro registradas durante o expediente. | Fechamento de caixa | CAIXA, FUNCIONARIO, VENDA, PAGAMENTO |
+| RN25 | O fechamento deverá registrar a data e hora, o funcionário responsável, o valor esperado, o valor contado e a diferença identificada. O histórico da abertura e do fechamento deverá ser preservado para consultas posteriores. | Fechamento de caixa | CAIXA, FUNCIONARIO |
+| RN26 | Se houver diferença entre o valor esperado e o valor contado, o sistema deverá registrar a divergência. A exigência de justificativa, conferência por outro funcionário ou autorização do gerente deverá seguir a política definida pelo estabelecimento. | Fechamento de caixa | CAIXA, FUNCIONARIO, LOG_ACESSO |
+| RN27 | Um caixa marcado como fechado não deverá aceitar novas vendas ou recebimentos vinculados a ele. | Fechamento de caixa | CAIXA, VENDA, PAGAMENTO, PAGAMENTO_FIADO |
+| RN28 | Sangrias e outras retiradas de dinheiro deverão ser registradas com valor, data, horário, responsável e motivo, para que sejam consideradas no cálculo do saldo esperado do caixa. | Movimentação de caixa; fechamento de caixa | CAIXA, FUNCIONARIO |
+| RN29 | A escala deverá permitir registrar os funcionários, os dias, os horários e as funções de cada turno. A quantidade de pessoas por turno deverá refletir a organização real da adega ou uma proposta formalmente aprovada. Não se deverá presumir um mínimo de duas pessoas por turno, pois a pesquisa informa que há dias em que uma pessoa trabalha sozinha. | Escala dos funcionários | ESCALA, FUNCIONARIO |
+
+### Cálculo do saldo esperado do caixa
+
+**Saldo esperado em dinheiro = valor inicial + recebimentos em dinheiro − saídas e sangrias registradas.**
+
+Pix e pagamentos por cartão não deverão ser somados ao dinheiro físico contado na gaveta. Esses valores deverão ser consultados separadamente conforme os registros de pagamento.
+
+## F. Restrições legais, privacidade e acesso
+
+As regras desta seção descrevem restrições que devem ser consideradas no sistema. A aplicação concreta das obrigações fiscais e legais deverá ser conferida com fontes oficiais e, quando necessário, com o contador ou profissional responsável.
+
+| ID | Regra de negócio | Fundamento ou referência | Como o sistema pode apoiar |
+|---|---|---|---|
+| RN30 | É proibido vender, fornecer ou entregar bebida alcoólica a menores de 18 anos. Quando houver dúvida sobre a idade, deverá ser solicitada a verificação de documento oficial. | Estatuto da Criança e do Adolescente, art. 243, e alterações legais aplicáveis. | Classificar produtos com restrição etária e apoiar os procedimentos de conferência. |
+| RN31 | A venda de cigarros e outros produtos de tabaco deverá respeitar as restrições legais aplicáveis, incluindo a proibição de fornecimento a menores de 18 anos. | Legislação brasileira aplicável à proteção de crianças e adolescentes e aos produtos de tabaco. | Classificar produtos com restrição etária e apoiar procedimentos de conferência. |
+| RN32 | A emissão do documento fiscal aplicável deverá seguir o regime tributário do estabelecimento e a legislação vigente. Os dados fiscais a armazenar deverão ser definidos com orientação contábil. | Regras fiscais federais e estaduais aplicáveis ao estabelecimento. | Permitir registrar dados do documento fiscal quando esse recurso fizer parte do escopo do sistema. |
+| RN33 | Os dados pessoais de clientes deverão ser limitados ao necessário para a finalidade informada, protegidos contra acesso indevido e tratados conforme a Lei Geral de Proteção de Dados Pessoais (LGPD). O consentimento não deverá ser presumido como a única base legal possível; a base adequada deverá ser definida para cada tratamento. | Lei nº 13.709/2018 (LGPD). | Restringir acessos, proteger dados, registrar finalidades e apoiar o atendimento dos direitos aplicáveis aos titulares. |
+| RN34 | O sistema deverá permitir definir permissões por perfil de usuário. Ações sensíveis, como alteração de preços, ajustes de estoque, mudança de limite de fiado, cancelamentos e acesso a dados pessoais, deverão ser protegidas. O registro de auditoria deverá ser aplicado conforme o escopo definido. | Política de segurança proposta para o sistema. | Configurar perfis de acesso e, quando implementado, registrar usuário, data, hora e ação. |
+
+## G. Cobertura dos pontos indicados na avaliação
+
+| Ponto indicado pelo professor | Regra relacionada |
+|---|---|
+| Formas de pagamento | RN02 |
+| Venda gera saída de estoque | RN05 |
+| Abertura de garrafa para doses | RN06 |
+| Cobrança e quitação do fiado | RN12 e RN13 |
+| Perdas e quebras | RN15 |
+| Identificação da reposição | RN16 |
+| Controle de validade | RN17 |
+| Responsabilidade por compras | RN18 |
+| Entrega ou retirada de fornecedores | RN19 |
+| Conferência de mercadorias | RN20 |
+| Tratamento de itens errados, faltantes ou avariados | RN21 |
+| Abertura de caixa | RN22 |
+| Registro das movimentações do caixa | RN23 |
+| Fechamento e conferência dos valores | RN24 e RN25 |
+| Registro de divergências e sangrias | RN26 e RN28 |
+| Bloqueio de caixa fechado | RN27 |
+| Escala de funcionários | RN29 |
+| Proibição de venda de álcool a menores | RN30 |
+| Restrição etária para tabaco | RN31 |
+| Documento fiscal | RN32 |
+| Proteção de dados pessoais (LGPD) | RN33 |
+| Perfis de acesso e auditoria | RN34 |
+
+## Observações finais
+
+1. As regras foram organizadas com base nos processos levantados na pesquisa de campo e nas necessidades identificadas para o sistema proposto.
+2. O controle formal de abertura, movimentações e fechamento de caixa é uma funcionalidade proposta e deverá ser validada pelo grupo.
+3. Os prazos de fiado e os avisos antecipados de validade dependem de aprovação e não devem ser apresentados como regras já praticadas pela adega.
+4. As regras de caixa, estoque e auditoria deverão ser compatibilizadas com o DER, o modelo lógico e o script SQL.
+5. O grupo deverá revisar as regras antes da entrega para garantir que os nomes das entidades, os atributos e os relacionamentos correspondam aos documentos finais do projeto.
