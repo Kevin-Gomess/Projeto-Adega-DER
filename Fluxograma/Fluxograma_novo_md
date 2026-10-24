@@ -16,6 +16,7 @@ flowchart TD
     H --> I[Pagamento confirmado]
     I --> J[Produtos são entregues ao cliente]
     J --> K([Fim])
+   ```
 
 2. Pagamento da venda
 
