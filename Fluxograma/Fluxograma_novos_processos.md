@@ -4,18 +4,21 @@ Versão 1.0, 23/10/2026. Estes cinco processos **complementam** o arquivo `Fluxo
 
 Os diagramas são Mermaid: o GitHub desenha sozinho. Para exportar em imagem, cole o bloco em https://mermaid.live.
 
-| # | Processo | Grupo | Regras | Entidades |
-|---|---|---|---|---|
-| 11 | Fechamento de caixa | Apoio | RN01, RN22, RN23, RN24 | CAIXA, VENDA, PAGAMENTO, PAGAMENTO_FIADO |
-| 12 | Cobrança e quitação do fiado | Vendas | RN12, RN13 | FIADO, PAGAMENTO_FIADO, CLIENTE, CAIXA |
-| 13 | Controle de validade | Apoio | RN17, RN15 | LOTE, MOVIMENTACAO_ESTOQUE |
-| 14 | Perdas e quebras | Apoio | RN14, RN15 | MOVIMENTACAO_ESTOQUE, ESTOQUE, LOTE, LOG_ACESSO |
-| 15 | Escala dos funcionários | Apoio | RN25 | ESCALA, FUNCIONARIO |
+Aqui está a tabela refeita, incluindo Abertura de caixa como processo próprio e mantendo os demais cinco processos na sequência.
 
-16 de 16 processos
+| #  | Processo                     | Grupo  | Regras                             | Entidades                                                         |
+| -- | ---------------------------- | ------ | ---------------------------------- | ----------------------------------------------------------------- |
+| 11 | Abertura de caixa            | Apoio  | RN01, RN22                         | CAIXA, FUNCIONARIO                                                |
+| 12 | Fechamento de caixa          | Apoio  | RN23, RN24, RN25, RN26, RN27, RN28 | CAIXA, VENDA, PAGAMENTO, PAGAMENTO_FIADO, FUNCIONARIO, LOG_ACESSO |
+| 13 | Cobrança e quitação do fiado | Vendas | RN12, RN13                         | FIADO, PAGAMENTO_FIADO, CLIENTE, CAIXA                            |
+| 14 | Controle de validade         | Apoio  | RN17, RN15                         | LOTE, MOVIMENTACAO_ESTOQUE                                        |
+| 15 | Perdas e quebras             | Apoio  | RN14, RN15                         | MOVIMENTACAO_ESTOQUE, ESTOQUE, LOTE, LOG_ACESSO                   |
+| 16 | Escala dos funcionários      | Apoio  | RN29                               | ESCALA, FUNCIONARIO                                               |
+
+ 16 de 16 processos
 
 
-reefaça , coloque a abertura do caixa
+
 
 ---
 
