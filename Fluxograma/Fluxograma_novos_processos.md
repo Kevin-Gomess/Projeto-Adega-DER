@@ -12,7 +12,10 @@ Os diagramas são Mermaid: o GitHub desenha sozinho. Para exportar em imagem, co
 | 14 | Perdas e quebras | Apoio | RN14, RN15 | MOVIMENTACAO_ESTOQUE, ESTOQUE, LOTE, LOG_ACESSO |
 | 15 | Escala dos funcionários | Apoio | RN25 | ESCALA, FUNCIONARIO |
 
-Com estes cinco, a cobertura dos processos esperados passa de 11 para **15 de 15**.
+16 de 16 processos
+
+
+reefaça , coloque a abertura do caixa
 
 ---
 
