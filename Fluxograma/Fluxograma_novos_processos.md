@@ -16,6 +16,29 @@ Com estes cinco, a cobertura dos processos esperados passa de 11 para **15 de 15
 
 ---
 
+## 10. Abertura de caixa
+
+**Quem participa:** funcionário responsável pelo caixa. O sistema verifica se já existe outro caixa aberto e registra o valor inicial em dinheiro.
+
+```mermaid
+flowchart TD
+    A([Início do turno]) --> B[Funcionário informa o troco inicial]
+    B --> C{Já existe outro caixa aberto?}
+    C -- Sim --> D[Sistema bloqueia a abertura]
+    C -- Não --> E[Sistema registra a abertura com data, hora e responsável]
+    E --> F[Caixa fica ABERTO]
+    F --> G[Funcionário realiza vendas e recebe pagamentos de fiado]
+    G --> H{Fim do turno?}
+    H -- Não --> G
+    H -- Sim --> I[Funcionário inicia o fechamento do caixa]
+    I --> J([Fim da abertura de caixa])
+```
+
+**Valor inicial:** dinheiro disponível na gaveta no início do turno, utilizado como troco para as operações do caixa.
+
+O sistema deve registrar o valor inicial, a data, o horário e o funcionário responsável pela abertura. O caixa permanece aberto até que o funcionário realize o processo de fechamento.
+
+**Observação:** o bloqueio de uma segunda abertura simultânea deve ser confirmado pelo grupo como regra do sistema proposto, pois essa condição ainda precisa ser validada para a rotina da adega.
 ## 11. Fechamento de caixa
 
 Quem participa: funcionário do caixa e gerente. O sistema calcula o dinheiro esperado e a diferença.
