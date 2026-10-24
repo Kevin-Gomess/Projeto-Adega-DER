@@ -4,6 +4,7 @@ Quem participa: cliente e funcionário.
 
 O cliente escolhe os produtos, o funcionário verifica os preços e calcula o valor da compra. No sistema proposto, os produtos e suas quantidades também serão registrados para facilitar o controle de estoque.
 
+```mermaid
 flowchart TD
     A([Início]) --> B[Cliente escolhe os produtos]
     B --> C[Funcionário consulta os preços]
